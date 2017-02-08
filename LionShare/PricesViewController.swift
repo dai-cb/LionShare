@@ -7,32 +7,7 @@ class PricesViewController: UIViewController,
 
 	@IBOutlet weak var tableView: UITableView!
 	
-	var prices: [Price]?
-	
-	let colours = ["BTC": 0xFF7300,
-	               "ETH": 0x8C01FF,
-	               "LTC": 0xB4B4B4,
-	               "REP": 0xEC3766,
-	               "ZEC": 0xF0AD4E,
-	               "LSK": 0x38E6B2,
-	               "XMR": 0xCF4900,
-	               "ETC": 0x4FB858,
-	               "XRP": 0x27A2DB,
-	               "DASH": 0x1E73BE,
-	               "STR": 0x08B5E5,
-	               "MAID": 0x5592D7,
-	               "FCT": 0x417BA4,
-	               "XEM": 0xFABE00,
-	               "STEEM": 0x4BA2F2,
-	               "DOGE": 0xF2A51F,
-	               "SDC": 0xE2213D,
-	               "BTS": 0x00A9E0,
-	               "GAME": 0x7CBF3F,
-	               "ARDR": 0x1162A1,
-	               "DCR": 0x47ACD7,
-	               "SJCX": 0x0014FF,
-	               "SC": 0x009688,
-	               "IOS": 0x84D0F4]
+	let currencies = Currency.currencies
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -51,12 +26,18 @@ class PricesViewController: UIViewController,
 	fileprivate func fetchPrices() {
 		
 		// fetch timerange
-		
 		let request = URLRequest(url: URL(string: "https://api.lionshare.capital/api/prices?period=day")!)
 		Client.shared.getPrices(request: request) { (prices) in
 			
 			if let prices = prices {
-				self.prices = prices
+				
+				for price in prices {
+					for currency in self.currencies {
+						if price.id == currency.symbol {
+							currency.price = price
+						}
+					}
+				}
 			}
 			
 			DispatchQueue.main.async {
@@ -66,12 +47,7 @@ class PricesViewController: UIViewController,
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		
-		guard let prices = prices else {
-			return 0
-		}
-		
-		return prices.count
+		return currencies.count
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -80,28 +56,25 @@ class PricesViewController: UIViewController,
 			return UITableViewCell()
 		}
 		
-		guard let prices = prices else {
-			return UITableViewCell()
+		let currency = currencies[indexPath.row]
+		
+		cell.currencyCode.text = currency.symbol
+		
+		guard let price = currency.price,
+			let prices = price.prices,
+			let last = prices.last else {
+				return UITableViewCell()
 		}
+
+		cell.price.text = CurrencyFormatter.sharedInstance.formatAmount(amount: last, currency: "USD")
 		
-		let price = prices[indexPath.row]
+		cell.price.textColor = UIColor(netHex:currency.colour!)
 		
-		cell.currencyCode.text = price.id
+		let (difference, sign) = price.difference()
 		
-		print(price.difference())
+		cell.difference.text = difference
 		
-		if let prices = price.prices,
-			let price = prices.last {
-			cell.price.text = "\(price)"
-		}
-		
-		for colour in colours {
-			if colour.key == price.id {
-				cell.price.textColor = UIColor(netHex:colour.value)
-			}
-		}
-		
-		cell.difference.text = price.difference()
+		cell.difference.textColor = sign == .plus ? UIColor.green : UIColor.red
 		
 		// handle random colour if no colour set
 		
@@ -119,13 +92,8 @@ class PricesViewController: UIViewController,
 	}
 }
 
-
 extension UIColor {
 	convenience init(red: Int, green: Int, blue: Int) {
-		assert(red >= 0 && red <= 255, "Invalid red component")
-		assert(green >= 0 && green <= 255, "Invalid green component")
-		assert(blue >= 0 && blue <= 255, "Invalid blue component")
-		
 		self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
 	}
 	

@@ -57,11 +57,11 @@ class CurrencyFormatter: NSObject {
 		return stringFromNumberFormatter.string(from: NSNumber(value: amount))!
 	}
 	
-	func formatAmountString(amount: String, currency: String, options: CurrencyFormatterOptions?) -> String {
+	func formatAmountString(amount: String, currency: String, options: CurrencyFormatterOptions? = nil) -> String {
 		return formatAmount(amount: (amount as NSString).doubleValue, currency: currency, options: options)
 	}
 	
-	func formatAmount(amount: Double, currency: String, options: CurrencyFormatterOptions?) -> String {
+	func formatAmount(amount: Double, currency: String, options: CurrencyFormatterOptions? = nil) -> String {
 		
 		var formatOptions = CurrencyFormatterOptions()
 		
@@ -80,7 +80,7 @@ class CurrencyFormatter: NSObject {
 		}
 		
 		formatter.minimumIntegerDigits = 1
-		formatter.maximumFractionDigits = 2
+		formatter.maximumFractionDigits = 8
 		formatter.minimumFractionDigits = 2
 		
 		if formatOptions.allowTruncation == true {

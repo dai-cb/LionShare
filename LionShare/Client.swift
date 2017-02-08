@@ -4,56 +4,6 @@ class Client: NSObject {
 	
 	static let shared = Client()
 	
-//	func getPrice(request: NSMutableURLRequest, callback: (String?) -> Void) {
-//		httpGet(request){
-//			(response, error) -> Void in
-//			if error != nil {
-//				print(error)
-//			} else {
-//				if error != nil {
-//					// ignore
-//				} else {
-//					guard let result = response as? [String: AnyObject] else {
-//						// ignore
-//						return
-//					}
-//					guard let price = result["price"] as? String else {
-//						// ignore
-//						return
-//					}
-//					callback(price)
-//				}
-//			}
-//		}
-//	}
-//	
-//	func getStats(request: NSMutableURLRequest, callback: (open: String?, volume: String?) -> Void) {
-//		httpGet(request){
-//			(response, error) -> Void in
-//			if error != nil {
-//				print(error)
-//			} else {
-//				if error != nil {
-//					// ignore
-//				} else {
-//					guard let result = response as? [String: AnyObject] else {
-//						// ignore
-//						return
-//					}
-//					guard let open = result["open"] as? String else {
-//						// ignore
-//						return
-//					}
-//					guard let volume = result["volume"] as? String else {
-//						// ignore
-//						return
-//					}
-//					callback(open: open, volume: volume)
-//				}
-//			}
-//		}
-//	}
-//	
 	func getPrices(request: URLRequest , callback: @escaping ([Price]?) -> Void) {
 		httpGet(request: request) { (response, error) -> Void in
 			if error != nil {
@@ -70,24 +20,13 @@ class Client: NSObject {
 				// ignore
 				return
 			}
-						
+
 			var prices: [Price] = []
 			for aPrice in data {
 				
 				let price = Price()
 				price.id = aPrice.key
-				
-				//print(aPrice.value)
-				
-//				for p in aPrice.value as! Array<String> {
-//					print(p)
-//				}
-				
-				
-//				for p in aPrice.value {
-//					price.prices
-//				}
-				
+
 				if let values = aPrice.value as? [Double] {
 					price.prices = values
 				}

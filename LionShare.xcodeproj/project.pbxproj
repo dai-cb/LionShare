@@ -19,6 +19,8 @@
 		CB465F891E49842000A0D7D4 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB465F881E49842000A0D7D4 /* Price.swift */; };
 		CB465F8B1E4992D000A0D7D4 /* SFMono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB465F8A1E4992D000A0D7D4 /* SFMono-Regular.otf */; };
 		CB465F8D1E49940700A0D7D4 /* PriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB465F8C1E49940700A0D7D4 /* PriceCell.swift */; };
+		CB94143E1E4AE85900574B7E /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94143D1E4AE85900574B7E /* Currency.swift */; };
+		CB9414401E4AFC5400574B7E /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94143F1E4AFC5400574B7E /* CurrencyCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		CB465F881E49842000A0D7D4 /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		CB465F8A1E4992D000A0D7D4 /* SFMono-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFMono-Regular.otf"; sourceTree = "<group>"; };
 		CB465F8C1E49940700A0D7D4 /* PriceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceCell.swift; sourceTree = "<group>"; };
+		CB94143D1E4AE85900574B7E /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		CB94143F1E4AFC5400574B7E /* CurrencyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 				CB465F6E1E49780E00A0D7D4 /* Main.storyboard */,
 				CB465F6C1E49780E00A0D7D4 /* PricesViewController.swift */,
 				CB465F8C1E49940700A0D7D4 /* PriceCell.swift */,
+				CB94143F1E4AFC5400574B7E /* CurrencyCell.swift */,
 				CB465F841E49811100A0D7D4 /* PortfolioViewController.swift */,
 				CB465F861E49812900A0D7D4 /* SettingsViewController.swift */,
 			);
@@ -105,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				CB465F881E49842000A0D7D4 /* Price.swift */,
+				CB94143D1E4AE85900574B7E /* Currency.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -191,6 +197,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB9414401E4AFC5400574B7E /* CurrencyCell.swift in Sources */,
+				CB94143E1E4AE85900574B7E /* Currency.swift in Sources */,
 				CB465F6D1E49780E00A0D7D4 /* PricesViewController.swift in Sources */,
 				CB465F891E49842000A0D7D4 /* Price.swift in Sources */,
 				CB465F851E49811100A0D7D4 /* PortfolioViewController.swift in Sources */,
