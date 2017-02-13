@@ -7,10 +7,12 @@ class PricesViewController: UIViewController,
 
 	@IBOutlet weak var tableView: UITableView!
 	
-	let currencies = Currency.currencies
+	var displayCurrencies = [Currency]()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		Currency.loadCurrencies()
 		
 		tabBarItem = UITabBarItem(title: "Prices", image: nil, selectedImage: nil)
 		
@@ -19,6 +21,8 @@ class PricesViewController: UIViewController,
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
+		
+		displayCurrencies = Currency.displayCurrencies
 		
 		fetchPrices()
 	}
@@ -29,25 +33,28 @@ class PricesViewController: UIViewController,
 		let request = URLRequest(url: URL(string: "https://api.lionshare.capital/api/prices?period=day")!)
 		Client.shared.getPrices(request: request) { (prices) in
 			
-			if let prices = prices {
-				
-				for price in prices {
-					for currency in self.currencies {
-						if price.id == currency.symbol {
-							currency.price = price
-						}
-					}
+			defer {
+				DispatchQueue.main.async {
+					self.tableView.reloadData()
 				}
 			}
 			
-			DispatchQueue.main.async {
-				self.tableView.reloadData()
+			guard let prices = prices  else {
+				return
+			}
+			
+			for price in prices {
+				for currency in Currency.currencies {
+					if price.id == currency.symbol {
+						currency.price = price
+					}
+				}
 			}
 		}
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return currencies.count
+		return displayCurrencies.count
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -56,7 +63,7 @@ class PricesViewController: UIViewController,
 			return UITableViewCell()
 		}
 		
-		let currency = currencies[indexPath.row]
+		let currency = displayCurrencies[indexPath.row]
 		
 		cell.currencyCode.text = currency.symbol
 		
@@ -68,7 +75,7 @@ class PricesViewController: UIViewController,
 
 		cell.price.text = CurrencyFormatter.sharedInstance.formatAmount(amount: last, currency: "USD")
 		
-		cell.price.textColor = UIColor(netHex:currency.colour!)
+		//cell.price.textColor = UIColor(netHex:currency.colour!)
 		
 		let (difference, sign) = price.difference()
 		

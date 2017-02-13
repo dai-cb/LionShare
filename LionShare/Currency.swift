@@ -1,8 +1,8 @@
 import Foundation
 
-class Currency: NSObject {
+class Currency: NSObject, NSCoding {
 	
-	static let currencies = [
+	static var currencies = [
 		
 		Currency(name: "Bitcoin", symbol: "BTC", colour: 0xFF7300),
 		Currency(name: "Ethereum", symbol: "ETH", colour: 0x8C01FF),
@@ -27,26 +27,81 @@ class Currency: NSObject {
 		Currency(name: "Decred", symbol: "DCR", colour: 0x47ACD7),
 		Currency(name: "Storjcoin X", symbol: "SJCX", colour: 0x0014FF),
 		Currency(name: "Siacoin", symbol: "SC", colour: 0x009688),
-		Currency(name: "I/O Coin", symbol: "SC", colour: 0x84D0F4)
+		Currency(name: "I/O Coin", symbol: "IOC", colour: 0x84D0F4)
 	]
+	
+	static var displayCurrencies: [Currency] {
+		get {
+			var temp = [Currency]()
+			for currency in Currency.currencies {
+				if currency.display == true {
+					temp.append(currency)
+				}
+			}
+			return temp
+		}
+	}
+	
+	static var savedCurrencies = [Currency]()
 	
 	var name: String?
 	var symbol: String?
 	var colour: Int?
 	var price: Price?
+	var amount: Double?
+	var display: Bool!
 	
 	override init() {
 		super.init()
 	}
 
-	public convenience init(name: String, symbol: String, colour: Int ) {
+	public convenience init(name: String, symbol: String, colour: Int, amount: Double? = 0.0, display: Bool = true) {
 		self.init()
 		
 		self.name = name
 		self.symbol = symbol
 		self.colour = colour
+		self.amount = amount
+		self.display = display
 	}
 	
-	
+	required public init(coder aDecoder: NSCoder) {
 
+		name = aDecoder.decodeObject(forKey: "name") as! String?
+		symbol = aDecoder.decodeObject(forKey: "symbol") as! String?
+		colour = aDecoder.decodeObject(forKey: "colour") as! Int?
+		amount = aDecoder.decodeObject(forKey: "amount") as! Double?
+		display = aDecoder.decodeObject(forKey: "display") as! Bool!
+		
+		super.init()
+	}
+	
+	func encode(with aCoder: NSCoder) {
+		
+		aCoder.encode(name, forKey: "name")
+		aCoder.encode(symbol, forKey: "symbol")
+		aCoder.encode(colour, forKey: "colour")
+		aCoder.encode(amount, forKey: "amount")
+		aCoder.encode(display, forKey: "display")
+	}
+	
+	static func save() {
+		let data  = NSKeyedArchiver.archivedData(withRootObject: Currency.currencies)
+		let defaults = UserDefaults.standard
+		defaults.set(data, forKey:"currencies" )
+	}
+	
+	static func loadCurrencies() {
+		if let data = UserDefaults.standard.object(forKey: "currencies") as? Data {
+			let savedCurrencies = NSKeyedUnarchiver.unarchiveObject(with: data) as! [Currency]
+			print("custom = \(savedCurrencies)")
+			
+			for c in savedCurrencies {
+				print("c = \(c.name)")
+				print("c = \(c.amount)")
+			}
+			
+			Currency.currencies = savedCurrencies
+		}
+	}
 }

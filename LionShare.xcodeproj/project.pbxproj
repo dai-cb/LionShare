@@ -21,6 +21,8 @@
 		CB465F8D1E49940700A0D7D4 /* PriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB465F8C1E49940700A0D7D4 /* PriceCell.swift */; };
 		CB94143E1E4AE85900574B7E /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94143D1E4AE85900574B7E /* Currency.swift */; };
 		CB9414401E4AFC5400574B7E /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94143F1E4AFC5400574B7E /* CurrencyCell.swift */; };
+		CB9F3A231E4D6D2900484C23 /* EditPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F3A221E4D6D2900484C23 /* EditPortfolioViewController.swift */; };
+		CB9F3A251E4D6D3C00484C23 /* DisplayPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F3A241E4D6D3C00484C23 /* DisplayPortfolioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		CB465F8C1E49940700A0D7D4 /* PriceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceCell.swift; sourceTree = "<group>"; };
 		CB94143D1E4AE85900574B7E /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		CB94143F1E4AFC5400574B7E /* CurrencyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
+		CB9F3A221E4D6D2900484C23 /* EditPortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPortfolioViewController.swift; sourceTree = "<group>"; };
+		CB9F3A241E4D6D3C00484C23 /* DisplayPortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayPortfolioViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 				CB465F8C1E49940700A0D7D4 /* PriceCell.swift */,
 				CB94143F1E4AFC5400574B7E /* CurrencyCell.swift */,
 				CB465F841E49811100A0D7D4 /* PortfolioViewController.swift */,
+				CB9F3A221E4D6D2900484C23 /* EditPortfolioViewController.swift */,
+				CB9F3A241E4D6D3C00484C23 /* DisplayPortfolioViewController.swift */,
 				CB465F861E49812900A0D7D4 /* SettingsViewController.swift */,
 			);
 			name = Views;
@@ -202,10 +208,12 @@
 				CB465F6D1E49780E00A0D7D4 /* PricesViewController.swift in Sources */,
 				CB465F891E49842000A0D7D4 /* Price.swift in Sources */,
 				CB465F851E49811100A0D7D4 /* PortfolioViewController.swift in Sources */,
+				CB9F3A231E4D6D2900484C23 /* EditPortfolioViewController.swift in Sources */,
 				CB465F811E49797B00A0D7D4 /* CurrencyFormatter.swift in Sources */,
 				CB465F831E497B7800A0D7D4 /* Client.swift in Sources */,
 				CB465F8D1E49940700A0D7D4 /* PriceCell.swift in Sources */,
 				CB465F6B1E49780E00A0D7D4 /* AppDelegate.swift in Sources */,
+				CB9F3A251E4D6D3C00484C23 /* DisplayPortfolioViewController.swift in Sources */,
 				CB465F871E49812900A0D7D4 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
