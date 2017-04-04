@@ -23,6 +23,7 @@
 		CB9414401E4AFC5400574B7E /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94143F1E4AFC5400574B7E /* CurrencyCell.swift */; };
 		CB9F3A231E4D6D2900484C23 /* EditPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F3A221E4D6D2900484C23 /* EditPortfolioViewController.swift */; };
 		CB9F3A251E4D6D3C00484C23 /* DisplayPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F3A241E4D6D3C00484C23 /* DisplayPortfolioViewController.swift */; };
+		CBA1BE361E93688E00FDBE3A /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA1BE351E93688E00FDBE3A /* ChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		CB94143F1E4AFC5400574B7E /* CurrencyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
 		CB9F3A221E4D6D2900484C23 /* EditPortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPortfolioViewController.swift; sourceTree = "<group>"; };
 		CB9F3A241E4D6D3C00484C23 /* DisplayPortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayPortfolioViewController.swift; sourceTree = "<group>"; };
+		CBA1BE351E93688E00FDBE3A /* ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				CB465F6C1E49780E00A0D7D4 /* PricesViewController.swift */,
 				CB465F8C1E49940700A0D7D4 /* PriceCell.swift */,
 				CB94143F1E4AFC5400574B7E /* CurrencyCell.swift */,
+				CBA1BE351E93688E00FDBE3A /* ChartView.swift */,
 				CB465F841E49811100A0D7D4 /* PortfolioViewController.swift */,
 				CB9F3A221E4D6D2900484C23 /* EditPortfolioViewController.swift */,
 				CB9F3A241E4D6D3C00484C23 /* DisplayPortfolioViewController.swift */,
@@ -204,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB9414401E4AFC5400574B7E /* CurrencyCell.swift in Sources */,
+				CBA1BE361E93688E00FDBE3A /* ChartView.swift in Sources */,
 				CB94143E1E4AE85900574B7E /* Currency.swift in Sources */,
 				CB465F6D1E49780E00A0D7D4 /* PricesViewController.swift in Sources */,
 				CB465F891E49842000A0D7D4 /* Price.swift in Sources */,

@@ -14,5 +14,6 @@ class SettingsViewController: UIViewController {
 		
 	}
 	
+	override var prefersStatusBarHidden: Bool { get { return true } }
 }
 

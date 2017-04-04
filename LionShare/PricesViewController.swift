@@ -83,6 +83,10 @@ class PricesViewController: UIViewController,
 		
 		cell.difference.textColor = sign == .plus ? UIColor.green : UIColor.red
 		
+		cell.dot.backgroundColor = UIColor(netHex:currency.colour!)
+		cell.chart.lineColour = UIColor(netHex:currency.colour!)
+		cell.chart.prices = prices
+		
 		// handle random colour if no colour set
 		
 		return cell
@@ -92,11 +96,7 @@ class PricesViewController: UIViewController,
 		cell.backgroundColor = UIColor.black
 	}
 	
-	override var prefersStatusBarHidden: Bool {
-		get {
-			return true
-		}
-	}
+	override var prefersStatusBarHidden: Bool { get { return true } }
 }
 
 extension UIColor {

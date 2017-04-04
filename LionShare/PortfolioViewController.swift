@@ -17,10 +17,6 @@ class PortfolioViewController: UIViewController {
 		performSegue(withIdentifier: "segue_edit", sender: self)
 	}
 	
-	override var prefersStatusBarHidden: Bool {
-		get {
-			return true
-		}
-	}
+	override var prefersStatusBarHidden: Bool { get { return true } }
 }
 

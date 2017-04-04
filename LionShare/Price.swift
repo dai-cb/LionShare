@@ -15,6 +15,8 @@ class Price: NSObject {
 			return ("", .plus)
 		}
 		
+		print("prices = \(prices)")
+		
 		let percent = ((1/(prices.first! / prices.last!)) - 1) * 100
 		
 		var sign: Sign = .plus

@@ -2,8 +2,8 @@ import Foundation
 
 class Currency: NSObject, NSCoding {
 	
+	// Hardcoded now, but hopefully the server ends up populating these for us...
 	static var currencies = [
-		
 		Currency(name: "Bitcoin", symbol: "BTC", colour: 0xFF7300),
 		Currency(name: "Ethereum", symbol: "ETH", colour: 0x8C01FF),
 		Currency(name: "Litecoin", symbol: "LTC", colour: 0xB4B4B4),
@@ -69,43 +69,48 @@ class Currency: NSObject, NSCoding {
 		self.display = display
 	}
 	
+	let keyName = "name"
+	let keySymbol = "symbol"
+	let keyColour = "colour"
+	let keyAmount = "amount"
+	let keyDisplay = "display"
+	static let keyCurrencies = "currencies"
+	
 	required public init(coder aDecoder: NSCoder) {
-
-		name = aDecoder.decodeObject(forKey: "name") as! String?
-		symbol = aDecoder.decodeObject(forKey: "symbol") as! String?
-		colour = aDecoder.decodeObject(forKey: "colour") as! Int?
-		amount = aDecoder.decodeObject(forKey: "amount") as! Double?
-		display = aDecoder.decodeObject(forKey: "display") as! Bool!
+		name = aDecoder.decodeObject(forKey: keyName) as! String?
+		symbol = aDecoder.decodeObject(forKey: keySymbol) as! String?
+		colour = aDecoder.decodeObject(forKey: keyColour) as! Int?
+		amount = aDecoder.decodeObject(forKey: keyAmount) as! Double?
+		display = aDecoder.decodeObject(forKey: keyDisplay) as! Bool!
 		
 		super.init()
 	}
 	
 	func encode(with aCoder: NSCoder) {
-		
-		aCoder.encode(name, forKey: "name")
-		aCoder.encode(symbol, forKey: "symbol")
-		aCoder.encode(colour, forKey: "colour")
-		aCoder.encode(amount, forKey: "amount")
-		aCoder.encode(display, forKey: "display")
+		aCoder.encode(name, forKey: keyName)
+		aCoder.encode(symbol, forKey: keySymbol)
+		aCoder.encode(colour, forKey: keyColour)
+		aCoder.encode(amount, forKey: keyAmount)
+		aCoder.encode(display, forKey: keyDisplay)
 	}
 	
 	static func save() {
 		let data  = NSKeyedArchiver.archivedData(withRootObject: Currency.currencies)
 		let defaults = UserDefaults.standard
-		defaults.set(data, forKey:"currencies" )
+		defaults.set(data, forKey: keyCurrencies)
 	}
 	
 	static func loadCurrencies() {
-		if let data = UserDefaults.standard.object(forKey: "currencies") as? Data {
-			let savedCurrencies = NSKeyedUnarchiver.unarchiveObject(with: data) as! [Currency]
-			print("custom = \(savedCurrencies)")
+		guard let data = UserDefaults.standard.object(forKey: keyCurrencies) as? Data,
+			let savedCurrencies = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Currency] else { return }
 			
-			for c in savedCurrencies {
-				print("c = \(c.name!)")
-				print("c = \(c.amount!)")
+		for saved in savedCurrencies {
+			for currency in currencies {
+				if saved.symbol == currency.symbol,
+					let amount = saved.amount {
+					currency.amount = amount
+				}
 			}
-			
-			//Currency.currencies = savedCurrencies
 		}
 	}
 }

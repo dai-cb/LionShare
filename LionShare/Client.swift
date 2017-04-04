@@ -11,16 +11,12 @@ class Client: NSObject {
 				return
 			}
 			
-			guard let result = response as? [String: AnyObject] else {
-				// TODO : Add errors
+			guard let result = response as? [String: AnyObject],
+				let data = result["data"] as? [String: AnyObject] else {
+				//TODO: Add errors
 				return
 			}
-			
-			guard let data = result["data"] as? [String: AnyObject] else {
-				// TODO : Add errors
-				return
-			}
-
+		
 			var prices: [Price] = []
 			for aPrice in data {
 				

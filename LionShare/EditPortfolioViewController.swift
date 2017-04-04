@@ -44,6 +44,9 @@ class EditPortfolioViewController: PortfolioViewController,
 		
 		let currency = currencies[indexPath.row]
 		
+		print("currency = \(currency.symbol)")
+		print("currency.amount = \(currency.amount)")
+		
 		if let amount = currency.amount {
 			cell.textField.text = "\(amount)"
 		}
@@ -75,9 +78,5 @@ class EditPortfolioViewController: PortfolioViewController,
 		tableView.reloadData()
 	}
 	
-	override var prefersStatusBarHidden: Bool {
-		get {
-			return true
-		}
-	}
+	override var prefersStatusBarHidden: Bool { get { return true } }
 }
