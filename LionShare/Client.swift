@@ -12,12 +12,12 @@ class Client: NSObject {
 			}
 			
 			guard let result = response as? [String: AnyObject] else {
-				// ignore
+				// TODO : Add errors
 				return
 			}
 			
 			guard let data = result["data"] as? [String: AnyObject] else {
-				// ignore
+				// TODO : Add errors
 				return
 			}
 

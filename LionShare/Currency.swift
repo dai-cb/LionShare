@@ -55,7 +55,11 @@ class Currency: NSObject, NSCoding {
 		super.init()
 	}
 
-	public convenience init(name: String, symbol: String, colour: Int, amount: Double? = 0.0, display: Bool = true) {
+	public convenience init(name: String,
+	                        symbol: String,
+	                        colour: Int,
+	                        amount: Double? = 0.0,
+	                        display: Bool = true) {
 		self.init()
 		
 		self.name = name
@@ -97,11 +101,11 @@ class Currency: NSObject, NSCoding {
 			print("custom = \(savedCurrencies)")
 			
 			for c in savedCurrencies {
-				print("c = \(c.name)")
-				print("c = \(c.amount)")
+				print("c = \(c.name!)")
+				print("c = \(c.amount!)")
 			}
 			
-			Currency.currencies = savedCurrencies
+			//Currency.currencies = savedCurrencies
 		}
 	}
 }
