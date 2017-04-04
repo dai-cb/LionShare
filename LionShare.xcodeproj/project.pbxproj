@@ -24,7 +24,34 @@
 		CB9F3A231E4D6D2900484C23 /* EditPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F3A221E4D6D2900484C23 /* EditPortfolioViewController.swift */; };
 		CB9F3A251E4D6D3C00484C23 /* DisplayPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F3A241E4D6D3C00484C23 /* DisplayPortfolioViewController.swift */; };
 		CBA1BE361E93688E00FDBE3A /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA1BE351E93688E00FDBE3A /* ChartView.swift */; };
+		CBA1BE401E9416A000FDBE3A /* LionShareKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CBA1BE3E1E9416A000FDBE3A /* LionShareKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBA1BE431E9416A000FDBE3A /* LionShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA1BE3C1E9416A000FDBE3A /* LionShareKit.framework */; };
+		CBA1BE441E9416A000FDBE3A /* LionShareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBA1BE3C1E9416A000FDBE3A /* LionShareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CBA1BE411E9416A000FDBE3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB465F5F1E49780D00A0D7D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBA1BE3B1E9416A000FDBE3A;
+			remoteInfo = LionShareKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CBA1BE481E9416A000FDBE3A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CBA1BE441E9416A000FDBE3A /* LionShareKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CB465F671E49780E00A0D7D4 /* LionShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LionShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,7 +62,7 @@
 		CB465F741E49780E00A0D7D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB465F761E49780E00A0D7D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB465F801E49797B00A0D7D4 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
-		CB465F821E497B7800A0D7D4 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		CB465F821E497B7800A0D7D4 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Client.swift; path = ../LionShare/Client.swift; sourceTree = "<group>"; };
 		CB465F841E49811100A0D7D4 /* PortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		CB465F861E49812900A0D7D4 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CB465F881E49842000A0D7D4 /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
@@ -46,10 +73,21 @@
 		CB9F3A221E4D6D2900484C23 /* EditPortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPortfolioViewController.swift; sourceTree = "<group>"; };
 		CB9F3A241E4D6D3C00484C23 /* DisplayPortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayPortfolioViewController.swift; sourceTree = "<group>"; };
 		CBA1BE351E93688E00FDBE3A /* ChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		CBA1BE3C1E9416A000FDBE3A /* LionShareKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LionShareKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBA1BE3E1E9416A000FDBE3A /* LionShareKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LionShareKit.h; sourceTree = "<group>"; };
+		CBA1BE3F1E9416A000FDBE3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CB465F641E49780E00A0D7D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBA1BE431E9416A000FDBE3A /* LionShareKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBA1BE381E9416A000FDBE3A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -63,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				CB465F691E49780E00A0D7D4 /* LionShare */,
+				CBA1BE3D1E9416A000FDBE3A /* LionShareKit */,
 				CB465F681E49780E00A0D7D4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				CB465F671E49780E00A0D7D4 /* LionShare.app */,
+				CBA1BE3C1E9416A000FDBE3A /* LionShareKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,7 +134,6 @@
 		CB465F7C1E49791C00A0D7D4 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				CB465F821E497B7800A0D7D4 /* Client.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -132,7 +171,28 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		CBA1BE3D1E9416A000FDBE3A /* LionShareKit */ = {
+			isa = PBXGroup;
+			children = (
+				CB465F821E497B7800A0D7D4 /* Client.swift */,
+				CBA1BE3E1E9416A000FDBE3A /* LionShareKit.h */,
+				CBA1BE3F1E9416A000FDBE3A /* Info.plist */,
+			);
+			path = LionShareKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CBA1BE391E9416A000FDBE3A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBA1BE401E9416A000FDBE3A /* LionShareKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		CB465F661E49780E00A0D7D4 /* LionShare */ = {
@@ -142,15 +202,35 @@
 				CB465F631E49780E00A0D7D4 /* Sources */,
 				CB465F641E49780E00A0D7D4 /* Frameworks */,
 				CB465F651E49780E00A0D7D4 /* Resources */,
+				CBA1BE481E9416A000FDBE3A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CBA1BE421E9416A000FDBE3A /* PBXTargetDependency */,
 			);
 			name = LionShare;
 			productName = LionShare;
 			productReference = CB465F671E49780E00A0D7D4 /* LionShare.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CBA1BE3B1E9416A000FDBE3A /* LionShareKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBA1BE451E9416A000FDBE3A /* Build configuration list for PBXNativeTarget "LionShareKit" */;
+			buildPhases = (
+				CBA1BE371E9416A000FDBE3A /* Sources */,
+				CBA1BE381E9416A000FDBE3A /* Frameworks */,
+				CBA1BE391E9416A000FDBE3A /* Headers */,
+				CBA1BE3A1E9416A000FDBE3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LionShareKit;
+			productName = LionShareKit;
+			productReference = CBA1BE3C1E9416A000FDBE3A /* LionShareKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -163,6 +243,11 @@
 				ORGANIZATIONNAME = 14lox;
 				TargetAttributes = {
 					CB465F661E49780E00A0D7D4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EXEZ76Y5F4;
+						ProvisioningStyle = Automatic;
+					};
+					CBA1BE3B1E9416A000FDBE3A = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = EXEZ76Y5F4;
 						ProvisioningStyle = Automatic;
@@ -183,6 +268,7 @@
 			projectRoot = "";
 			targets = (
 				CB465F661E49780E00A0D7D4 /* LionShare */,
+				CBA1BE3B1E9416A000FDBE3A /* LionShareKit */,
 			);
 		};
 /* End PBXProject section */
@@ -196,6 +282,13 @@
 				CB465F721E49780E00A0D7D4 /* Assets.xcassets in Resources */,
 				CB465F8B1E4992D000A0D7D4 /* SFMono-Regular.otf in Resources */,
 				CB465F701E49780E00A0D7D4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBA1BE3A1E9416A000FDBE3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +315,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CBA1BE371E9416A000FDBE3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBA1BE421E9416A000FDBE3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBA1BE3B1E9416A000FDBE3A /* LionShareKit */;
+			targetProxy = CBA1BE411E9416A000FDBE3A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CB465F6E1E49780E00A0D7D4 /* Main.storyboard */ = {
@@ -361,6 +469,52 @@
 			};
 			name = Release;
 		};
+		CBA1BE461E9416A000FDBE3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = EXEZ76Y5F4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LionShareKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.14lox.LionShareKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CBA1BE471E9416A000FDBE3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = EXEZ76Y5F4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LionShareKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.14lox.LionShareKit;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -381,6 +535,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		CBA1BE451E9416A000FDBE3A /* Build configuration list for PBXNativeTarget "LionShareKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBA1BE461E9416A000FDBE3A /* Debug */,
+				CBA1BE471E9416A000FDBE3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

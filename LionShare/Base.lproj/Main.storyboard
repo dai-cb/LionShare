@@ -223,20 +223,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Umd-CH-c1O">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Period" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jol-3s-tWW" userLabel="Time Period">
+                                <rect key="frame" x="26" y="30" width="323" height="21"/>
+                                <fontDescription key="fontDescription" name="SFMono-Regular" family="SF Mono" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cGC-TR-nTT">
+                                <rect key="frame" x="26" y="61" width="323" height="29"/>
+                                <segments>
+                                    <segment title="1 Day"/>
+                                    <segment title="1 Week"/>
+                                    <segment title="1 Month"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="timeSegmentedControlActionWithSender:" destination="Bw0-vq-eaI" eventType="valueChanged" id="mDE-um-bB2"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Native Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gO-ni-9sC" userLabel="Native Currency">
+                                <rect key="frame" x="26" y="99" width="323" height="20"/>
+                                <fontDescription key="fontDescription" name="SFMono-Regular" family="SF Mono" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ce-xY-Czi" userLabel="Native Currency Button">
+                                <rect key="frame" x="26" y="129" width="323" height="30"/>
+                                <state key="normal" title="USD"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCf-Eu-P0E" userLabel="Exchange">
+                                <rect key="frame" x="26" y="169" width="323" height="21"/>
+                                <fontDescription key="fontDescription" name="SFMono-Regular" family="SF Mono" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNp-2m-gLe" userLabel="Exchange Button">
+                                <rect key="frame" x="26" y="200" width="323" height="33"/>
+                                <fontDescription key="fontDescription" name="SFMono-Regular" family="SF Mono" pointSize="17"/>
+                                <state key="normal" title="GDAX / Poloniex"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asset List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9r-xo-FJW" userLabel="Asset List">
+                                <rect key="frame" x="26" y="243" width="323" height="20"/>
+                                <fontDescription key="fontDescription" name="SFMono-Regular" family="SF Mono" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Umd-CH-c1O" userLabel="Asset List Table View">
+                                <rect key="frame" x="0.0" y="273" width="375" height="345"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Umd-CH-c1O" firstAttribute="top" secondItem="uAU-SY-gIT" secondAttribute="bottom" id="LU4-31-Xs3"/>
+                            <constraint firstItem="cGC-TR-nTT" firstAttribute="leading" secondItem="biw-Jr-eLu" secondAttribute="leadingMargin" constant="10" id="2yP-Vc-k1C"/>
+                            <constraint firstItem="3gO-ni-9sC" firstAttribute="leading" secondItem="biw-Jr-eLu" secondAttribute="leadingMargin" constant="10" id="4zV-F8-Xqr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3gO-ni-9sC" secondAttribute="trailing" constant="10" id="6FV-bd-SH7"/>
+                            <constraint firstItem="cGC-TR-nTT" firstAttribute="top" secondItem="jol-3s-tWW" secondAttribute="bottom" constant="10" id="7bu-7P-3JL"/>
+                            <constraint firstItem="5ce-xY-Czi" firstAttribute="top" secondItem="3gO-ni-9sC" secondAttribute="bottom" constant="10" id="FBQ-R5-UmF"/>
+                            <constraint firstItem="jol-3s-tWW" firstAttribute="leading" secondItem="biw-Jr-eLu" secondAttribute="leadingMargin" constant="10" id="HlK-Eo-m6n"/>
+                            <constraint firstItem="Umd-CH-c1O" firstAttribute="top" secondItem="t9r-xo-FJW" secondAttribute="bottom" constant="10" id="QEZ-AV-hZ9"/>
                             <constraint firstItem="Umd-CH-c1O" firstAttribute="leading" secondItem="biw-Jr-eLu" secondAttribute="leading" id="QoH-ta-V9b"/>
+                            <constraint firstItem="GCf-Eu-P0E" firstAttribute="leading" secondItem="biw-Jr-eLu" secondAttribute="leadingMargin" constant="10" id="RMC-WT-VZN"/>
+                            <constraint firstItem="5ce-xY-Czi" firstAttribute="leading" secondItem="biw-Jr-eLu" secondAttribute="leadingMargin" constant="10" id="S8t-Wc-bHy"/>
+                            <constraint firstItem="jol-3s-tWW" firstAttribute="top" secondItem="uAU-SY-gIT" secondAttribute="bottom" constant="10" id="WHr-r4-O4S"/>
+                            <constraint firstItem="DNp-2m-gLe" firstAttribute="leading" secondItem="biw-Jr-eLu" secondAttribute="leadingMargin" constant="10" id="YDy-6a-0Jb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5ce-xY-Czi" secondAttribute="trailing" constant="10" id="cWq-Dn-8Tt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cGC-TR-nTT" secondAttribute="trailing" constant="10" id="eFV-hp-mD0"/>
+                            <constraint firstItem="t9r-xo-FJW" firstAttribute="leading" secondItem="biw-Jr-eLu" secondAttribute="leadingMargin" constant="10" id="ee5-RX-PiO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jol-3s-tWW" secondAttribute="trailing" constant="10" id="hBi-gJ-vP4"/>
+                            <constraint firstItem="DNp-2m-gLe" firstAttribute="top" secondItem="GCf-Eu-P0E" secondAttribute="bottom" constant="10" id="iNL-Sv-ydd"/>
+                            <constraint firstItem="3gO-ni-9sC" firstAttribute="top" secondItem="cGC-TR-nTT" secondAttribute="bottom" constant="10" id="kLi-XZ-bty"/>
+                            <constraint firstItem="t9r-xo-FJW" firstAttribute="top" secondItem="DNp-2m-gLe" secondAttribute="bottom" constant="10" id="lKo-0p-ndw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t9r-xo-FJW" secondAttribute="trailing" constant="10" id="lty-JL-ldT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GCf-Eu-P0E" secondAttribute="trailing" constant="10" id="pFv-Sr-d6H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DNp-2m-gLe" secondAttribute="trailing" constant="10" id="van-G8-faL"/>
                             <constraint firstItem="Xsa-qw-wcC" firstAttribute="top" secondItem="Umd-CH-c1O" secondAttribute="bottom" id="xaP-js-09I"/>
                             <constraint firstAttribute="trailing" secondItem="Umd-CH-c1O" secondAttribute="trailing" id="xu6-zs-c1V"/>
+                            <constraint firstItem="GCf-Eu-P0E" firstAttribute="top" secondItem="5ce-xY-Czi" secondAttribute="bottom" constant="10" id="zFR-rj-ryf"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="yUc-LK-eCP"/>
+                    <connections>
+                        <outlet property="timeSegmentedControl" destination="cGC-TR-nTT" id="2iq-GX-YSe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qF-cg-qwz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -363,10 +433,11 @@
         <scene sceneID="Nbe-Cp-ywt">
             <objects>
                 <tabBarController id="bhK-PE-pWq" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="5tb-3T-vdc">
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="5tb-3T-vdc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="1nd-Mx-Jpj" kind="relationship" relationship="viewControllers" id="idg-Lc-YcU"/>
@@ -384,6 +455,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="5E6-qq-cLY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Portfolio" id="Qn4-y3-wj4"/>
                     <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="UjC-Vb-ZBS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

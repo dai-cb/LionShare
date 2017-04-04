@@ -1,4 +1,3 @@
-
 import UIKit
 
 class PricesViewController: UIViewController,
@@ -30,9 +29,7 @@ class PricesViewController: UIViewController,
 	fileprivate func fetchPrices() {
 		
 		// fetch timerange
-		let request = URLRequest(url: URL(string: "https://api.lionshare.capital/api/prices?period=day")!)
-		Client.shared.getPrices(request: request) { (prices) in
-			
+		Client.shared.getPrices() { (prices) in
 			defer {
 				DispatchQueue.main.async {
 					self.tableView.reloadData()

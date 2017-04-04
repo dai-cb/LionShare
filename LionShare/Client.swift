@@ -4,7 +4,16 @@ class Client: NSObject {
 	
 	static let shared = Client()
 	
-	func getPrices(request: URLRequest , callback: @escaping ([Price]?) -> Void) {
+	enum TimePeriod: String {
+		case day, week, month
+	}
+	
+	var timePeriod: TimePeriod = .day
+	
+	func getPrices(callback: @escaping ([Price]?) -> Void) {
+		
+		let request = URLRequest(url: URL(string: "https://api.lionshare.capital/api/prices?period=\(timePeriod)")!)
+		
 		httpGet(request: request) { (response, error) -> Void in
 			if error != nil {
 				print(error!)
