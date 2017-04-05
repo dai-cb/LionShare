@@ -4,27 +4,49 @@ class DisplayPortfolioViewController: PortfolioViewController {
 	
 	@IBOutlet weak var pieChart: PieChart!
 	
+	var portfolioCurrencies = [Currency]()
+	
 	@IBAction func editPressed(_ sender: Any) {
 		performSegue(withIdentifier: "show_to_edit", sender: self)
-		
 	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-				
-		var error = PieChart.Slice()
-		error.value = 100
-		error.color = UIColor.blue
+			
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
 		
-		var zero = PieChart.Slice()
-		zero.value = 1000
-		zero.color = UIColor.red
+		Currency.loadCurrencies()
 		
-		var win = PieChart.Slice()
-		win.value = 500
-		win.color = UIColor.orange
+		portfolioCurrencies = Currency.portfolioCurrencies
 		
-		pieChart.activeSlice = 2
-		pieChart.slices = [error, zero, win]
+		buildPie(currencies: portfolioCurrencies)
+	}
+	
+	func buildPie(currencies: [Currency]) {
+	
+		print("currencies = \(currencies)")
+		
+		var slices: [PieChart.Slice] = []
+		
+		for currency in currencies {
+				print("currency = \(currency)")
+				print("name = \(currency.name)")
+				print("amount = \(currency.portfolioAmount)")
+			
+			guard let amount = currency.portfolioAmount,
+				let colour = currency.colour else { continue }
+			
+			var slice = PieChart.Slice()
+			slice.value = CGFloat(amount)
+			slice.color = UIColor(hex: colour)
+			slices.append(slice)
+		}
+		
+		pieChart.activeSlice = 0
+		pieChart.slices = slices
 	}
 	
 	@IBAction func chartPressed(sender: UIControl) {

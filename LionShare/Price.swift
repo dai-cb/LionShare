@@ -8,14 +8,21 @@ class Price: NSObject {
 	
 	var id: String?
 	var prices: [Double]?
-	
+	var latest: Double?
+
 	func difference() -> (String, Sign) {
 		
-		guard let prices = self.prices else {
+		guard let prices = self.prices,
+			let first = prices.first,
+			let last = prices.last else {
 			return ("", .plus)
 		}
 		
-		let percent = ((1/(prices.first! / prices.last!)) - 1) * 100
+		if latest == nil || latest == 0.0 {
+			latest = last
+		}
+		
+		let percent = ((1/(first / latest!)) - 1) * 100
 		
 		var sign: Sign = .plus
 		

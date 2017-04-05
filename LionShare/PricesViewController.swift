@@ -1,9 +1,11 @@
 import UIKit
 import LionShareKit
+import Starscream
 
 class PricesViewController: UIViewController,
 							UITableViewDataSource,
-							UITableViewDelegate {
+							UITableViewDelegate,
+							WebSocketDelegate {
 
 	@IBOutlet weak var tableView: UITableView!
 	
@@ -11,8 +13,12 @@ class PricesViewController: UIViewController,
 	
 	fileprivate var displayCurrencies = [Currency]()
 	
+	let socket = WebSocket(url: URL(string: "wss://lionsharecapital.herokuapp.com/")!)
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
+		socket.delegate = self
 		
 		Currency.loadCurrencies()
 		
@@ -28,14 +34,86 @@ class PricesViewController: UIViewController,
 		
 		displayCurrencies = Currency.displayCurrencies
 		
-		fetchPrices()
+		fetchPrices {
+			self.startSocket()
+		}
 	}
 	
-	fileprivate func fetchPrices() {
+	override func viewDidDisappear(_ animated: Bool) {
+		super.viewDidDisappear(animated)
+		
+		stopSocket()
+	}
+	
+	func startSocket() {
+		socket.connect()
+	}
+	
+	func stopSocket() {
+		socket.disconnect(forceTimeout: -1)
+	}
+	
+	func websocketDidConnect(socket: WebSocket) {
+		print("websocket is connected")
+	}
+	
+	func websocketDidDisconnect(socket: WebSocket, error: NSError?) {
+		print("websocket is disconnected: \(error?.localizedDescription)")
+	}
+	
+	func websocketDidReceiveMessage(socket: WebSocket, text: String) {
+		//print("got some text: \(text)")
+		
+		guard let latest = convert(text: text),
+			let symbol = latest["cryptoCurrency"] as? String,
+			let price = latest["price"] as? Double else {
+			return
+		}
+	
+		var index:Int?
+		for currency in displayCurrencies {
+			if symbol == currency.symbol {
+				currency.price?.latest = price
+				index = displayCurrencies.index(of: currency)
+			}
+		}
+		
+		guard let row = index else { return }
+		
+		let indexPath = IndexPath(row: row, section: 0)
+		
+		tableView.reloadRows(at: [indexPath], with: .none)
+		
+		guard let cell = tableView.cellForRow(at: indexPath) as? PriceCell else { return }
+		
+		cell.dot.alpha = 0
+		
+		UIView.animate(withDuration: 0.7) {
+			cell.dot.alpha = 1
+		}
+	}
+	
+	func convert(text: String) -> [String: Any]? {
+		if let data = text.data(using: .utf8) {
+			do {
+				return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+			} catch {
+				print(error.localizedDescription)
+			}
+		}
+		return nil
+	}
+	
+	func websocketDidReceiveData(socket: WebSocket, data: Data) {
+		//ignore.
+	}
+	
+	fileprivate func fetchPrices(callback: @escaping ()  -> Void) {
 		Client.shared.getPrices() { (prices, error) in
 			defer {
 				DispatchQueue.main.async {
 					self.tableView.reloadData()
+					callback()
 				}
 			}
 			
@@ -77,8 +155,13 @@ class PricesViewController: UIViewController,
 			let colour = currency.colour else {
 				return UITableViewCell()
 		}
-
-		cell.price.text = CurrencyFormatter.sharedInstance.formatAmount(amount: last, currency: "USD", options: currencyFormatterOptions)
+	
+		var latest: Double = last
+		if let priceLatest = price.latest {
+			latest = priceLatest
+		}
+		
+		cell.price.text = CurrencyFormatter.sharedInstance.formatAmount(amount: latest, currency: "USD", options: currencyFormatterOptions)
 		
 		let (difference, sign) = price.difference()
 		
@@ -86,8 +169,8 @@ class PricesViewController: UIViewController,
 		
 		cell.difference.textColor = sign == .plus ? Constants.greenPositiveColour : Constants.redNegativeColour
 		
-		cell.dot.backgroundColor = UIColor(netHex:colour)
-		cell.chart.lineColour = UIColor(netHex:colour)
+		cell.dot.backgroundColor = UIColor(hex:colour)
+		cell.chart.lineColour = UIColor(hex:colour)
 		cell.chart.prices = prices
 		
 		return cell

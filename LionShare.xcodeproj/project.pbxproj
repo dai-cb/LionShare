@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F3285C68911EB640C24C9B9 /* Pods_LionShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5521521F64E4F06F5BD87969 /* Pods_LionShare.framework */; };
 		CB465F6B1E49780E00A0D7D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB465F6A1E49780E00A0D7D4 /* AppDelegate.swift */; };
 		CB465F6D1E49780E00A0D7D4 /* PricesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB465F6C1E49780E00A0D7D4 /* PricesViewController.swift */; };
 		CB465F701E49780E00A0D7D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB465F6E1E49780E00A0D7D4 /* Main.storyboard */; };
@@ -91,6 +92,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0685D5E233E9B38194DFE4DD /* Pods-LionShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LionShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-LionShare/Pods-LionShare.release.xcconfig"; sourceTree = "<group>"; };
+		5521521F64E4F06F5BD87969 /* Pods_LionShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LionShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74ADCEC09F25D83E098D1BA1 /* Pods-LionShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LionShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LionShare/Pods-LionShare.debug.xcconfig"; sourceTree = "<group>"; };
 		CB465F671E49780E00A0D7D4 /* LionShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LionShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB465F6A1E49780E00A0D7D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB465F6C1E49780E00A0D7D4 /* PricesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBA1BE431E9416A000FDBE3A /* LionShareKit.framework in Frameworks */,
+				3F3285C68911EB640C24C9B9 /* Pods_LionShare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +157,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DAF17D4C8F921AC0E3C0B10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74ADCEC09F25D83E098D1BA1 /* Pods-LionShare.debug.xcconfig */,
+				0685D5E233E9B38194DFE4DD /* Pods-LionShare.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CB465F5E1E49780D00A0D7D4 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +174,7 @@
 				CB74B9191E94A3100033A4A4 /* LionShare Widget */,
 				CB74B9161E94A3100033A4A4 /* Frameworks */,
 				CB465F681E49780E00A0D7D4 /* Products */,
+				1DAF17D4C8F921AC0E3C0B10 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -227,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				CB74B9171E94A3100033A4A4 /* NotificationCenter.framework */,
+				5521521F64E4F06F5BD87969 /* Pods_LionShare.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -288,11 +304,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB465F791E49780E00A0D7D4 /* Build configuration list for PBXNativeTarget "LionShare" */;
 			buildPhases = (
+				552A2E649C14B4B6674D4723 /* [CP] Check Pods Manifest.lock */,
 				CB465F631E49780E00A0D7D4 /* Sources */,
 				CB465F641E49780E00A0D7D4 /* Frameworks */,
 				CB465F651E49780E00A0D7D4 /* Resources */,
 				CBA1BE481E9416A000FDBE3A /* Embed Frameworks */,
 				CB74B9261E94A3100033A4A4 /* Embed App Extensions */,
+				C6E8802F6E58AF978F3C05FA /* [CP] Embed Pods Frameworks */,
+				E3DEBBD24FFCF89E5F6A41B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -418,6 +437,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		552A2E649C14B4B6674D4723 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C6E8802F6E58AF978F3C05FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LionShare/Pods-LionShare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3DEBBD24FFCF89E5F6A41B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LionShare/Pods-LionShare-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CB465F631E49780E00A0D7D4 /* Sources */ = {
@@ -603,6 +670,7 @@
 		};
 		CB465F7A1E49780E00A0D7D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74ADCEC09F25D83E098D1BA1 /* Pods-LionShare.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -617,6 +685,7 @@
 		};
 		CB465F7B1E49780E00A0D7D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0685D5E233E9B38194DFE4DD /* Pods-LionShare.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;

@@ -319,7 +319,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EEK-yh-Xp2">
-                                                    <rect key="frame" x="45" y="22.5" width="40" height="20"/>
+                                                    <rect key="frame" x="45" y="18" width="40" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="A6d-Uc-JNP"/>
                                                         <constraint firstAttribute="width" constant="40" id="Djx-ge-LZx"/>
@@ -329,13 +329,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pud-S3-7uv">
-                                                    <rect key="frame" x="100" y="20" width="135" height="24"/>
+                                                    <rect key="frame" x="100" y="15" width="135" height="24"/>
                                                     <fontDescription key="fontDescription" name="SFMono-Regular" family="SF Mono" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Gp-fB-iBg">
-                                                    <rect key="frame" x="100" y="49.5" width="275" height="20"/>
+                                                    <rect key="frame" x="100" y="50" width="275" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="NT1-mo-BDr"/>
                                                     </constraints>
@@ -344,7 +344,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56a-kt-WwD" userLabel="Chart" customClass="ChartView" customModule="LionShare" customModuleProvider="target">
-                                                    <rect key="frame" x="235" y="19.5" width="120" height="50"/>
+                                                    <rect key="frame" x="235" y="20" width="120" height="50"/>
                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="Hjl-a5-bkH"/>
@@ -352,7 +352,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hyr-Xk-6Pf">
-                                                    <rect key="frame" x="20" y="25" width="15" height="15"/>
+                                                    <rect key="frame" x="20" y="20" width="15" height="15"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="15" id="PyV-OK-j3Y"/>
@@ -375,7 +375,7 @@
                                                 <constraint firstItem="hyr-Xk-6Pf" firstAttribute="leading" secondItem="1gL-AU-PDK" secondAttribute="leading" constant="20" id="LAS-x5-0Kv"/>
                                                 <constraint firstItem="pud-S3-7uv" firstAttribute="centerY" secondItem="EEK-yh-Xp2" secondAttribute="centerY" id="LUe-mx-h0f"/>
                                                 <constraint firstItem="pud-S3-7uv" firstAttribute="trailing" secondItem="56a-kt-WwD" secondAttribute="leading" id="Yyx-lF-fpL"/>
-                                                <constraint firstItem="pud-S3-7uv" firstAttribute="top" secondItem="1gL-AU-PDK" secondAttribute="top" constant="20" id="h9D-9G-jRo"/>
+                                                <constraint firstItem="pud-S3-7uv" firstAttribute="top" secondItem="1gL-AU-PDK" secondAttribute="top" constant="15" id="h9D-9G-jRo"/>
                                                 <constraint firstItem="pud-S3-7uv" firstAttribute="leading" secondItem="1gL-AU-PDK" secondAttribute="leading" constant="100" id="qgL-PO-zfJ"/>
                                                 <constraint firstItem="hyr-Xk-6Pf" firstAttribute="centerY" secondItem="EEK-yh-Xp2" secondAttribute="centerY" id="uie-H2-HAx"/>
                                                 <constraint firstAttribute="bottom" secondItem="56a-kt-WwD" secondAttribute="bottom" constant="20" id="zcg-Fd-Pn8"/>

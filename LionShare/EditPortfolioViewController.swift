@@ -8,7 +8,9 @@ class EditPortfolioViewController: PortfolioViewController,
 	
 	@IBOutlet weak var tableView: UITableView!
 	@IBAction func savePressed(_ sender: Any) {
-		// Save
+		
+		Currency.save()
+		
 		performSegue(withIdentifier: "edit_to_show", sender: self)
 	}
 		
@@ -54,7 +56,7 @@ class EditPortfolioViewController: PortfolioViewController,
 		
 		let currency = currencies[indexPath.row]
 		
-		if let amount = currency.amount {
+		if let amount = currency.portfolioAmount {
 			cell.textField.text = "\(amount)"
 		}
 		
@@ -76,7 +78,7 @@ class EditPortfolioViewController: PortfolioViewController,
 		
 		if let amountText = textField.text,
 			let amount = Double(amountText) {
-				currency.amount = amount
+				currency.portfolioAmount = amount
 		}
 		
 		Currency.save()

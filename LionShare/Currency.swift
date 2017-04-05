@@ -42,13 +42,27 @@ class Currency: NSObject, NSCoding {
 		}
 	}
 	
+	static var portfolioCurrencies: [Currency] {
+		get {
+			var temp = [Currency]()
+			
+			for currency in self.displayCurrencies {
+				if let amount = currency.portfolioAmount,
+					amount > 0 {
+					temp.append(currency)
+				}
+			}
+			return temp
+		}
+	}
+
 	static var savedCurrencies = [Currency]()
 	
 	var name: String?
 	var symbol: String?
 	var colour: Int?
 	var price: Price?
-	var amount: Double?
+	var portfolioAmount: Double?
 	var display: Bool!
 	
 	override init() {
@@ -58,21 +72,21 @@ class Currency: NSObject, NSCoding {
 	public convenience init(name: String,
 	                        symbol: String,
 	                        colour: Int,
-	                        amount: Double? = 0.0,
+	                        portfolioAmount: Double? = 0.0,
 	                        display: Bool = true) {
 		self.init()
 		
 		self.name = name
 		self.symbol = symbol
 		self.colour = colour
-		self.amount = amount
+		self.portfolioAmount = portfolioAmount
 		self.display = display
 	}
 	
 	let keyName = "name"
 	let keySymbol = "symbol"
 	let keyColour = "colour"
-	let keyAmount = "amount"
+	let keyPortfolioAmount = "portfolioAmount"
 	let keyDisplay = "display"
 	static let keyCurrencies = "currencies"
 	
@@ -80,7 +94,7 @@ class Currency: NSObject, NSCoding {
 		name = aDecoder.decodeObject(forKey: keyName) as! String?
 		symbol = aDecoder.decodeObject(forKey: keySymbol) as! String?
 		colour = aDecoder.decodeObject(forKey: keyColour) as! Int?
-		amount = aDecoder.decodeObject(forKey: keyAmount) as! Double?
+		portfolioAmount = aDecoder.decodeObject(forKey: keyPortfolioAmount) as! Double?
 		display = aDecoder.decodeObject(forKey: keyDisplay) as! Bool!
 		
 		super.init()
@@ -90,7 +104,7 @@ class Currency: NSObject, NSCoding {
 		aCoder.encode(name, forKey: keyName)
 		aCoder.encode(symbol, forKey: keySymbol)
 		aCoder.encode(colour, forKey: keyColour)
-		aCoder.encode(amount, forKey: keyAmount)
+		aCoder.encode(portfolioAmount, forKey: keyPortfolioAmount)
 		aCoder.encode(display, forKey: keyDisplay)
 	}
 	
@@ -107,8 +121,8 @@ class Currency: NSObject, NSCoding {
 		for saved in savedCurrencies {
 			for currency in currencies {
 				if saved.symbol == currency.symbol,
-					let amount = saved.amount {
-					currency.amount = amount
+					let amount = saved.portfolioAmount {
+					currency.portfolioAmount = amount
 				}
 			}
 		}
