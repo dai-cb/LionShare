@@ -23,7 +23,6 @@ protocol ChartsViewDatasource {
 	var lineColour = UIColor.white
 	
 	func reloadData() {
-		
 		guard prices.count > 0 else {
 			return
 		}

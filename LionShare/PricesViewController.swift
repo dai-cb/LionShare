@@ -1,4 +1,5 @@
 import UIKit
+import LionShareKit
 
 class PricesViewController: UIViewController,
 							UITableViewDataSource,
@@ -27,11 +28,16 @@ class PricesViewController: UIViewController,
 	}
 	
 	fileprivate func fetchPrices() {
-		Client.shared.getPrices() { (prices) in
+		Client.shared.getPrices() { (prices, error) in
 			defer {
 				DispatchQueue.main.async {
 					self.tableView.reloadData()
 				}
+			}
+			
+			if let error = error {
+				print("error = \(error)")
+				return
 			}
 			
 			guard let prices = prices  else {
@@ -74,7 +80,7 @@ class PricesViewController: UIViewController,
 		
 		cell.difference.text = difference
 		
-		cell.difference.textColor = sign == .plus ? UIColor.green : UIColor.red
+		cell.difference.textColor = sign == .plus ? Constants.greenPositiveColour : Constants.redNegativeColour
 		
 		cell.dot.backgroundColor = UIColor(netHex:colour)
 		cell.chart.lineColour = UIColor(netHex:colour)
@@ -85,15 +91,5 @@ class PricesViewController: UIViewController,
 	
 	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
 		cell.backgroundColor = UIColor.black
-	}
-}
-
-extension UIColor {
-	convenience init(red: Int, green: Int, blue: Int) {
-		self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
-	}
-	
-	convenience init(netHex:Int) {
-		self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue:netHex & 0xff)
 	}
 }

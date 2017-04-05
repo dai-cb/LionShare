@@ -8,21 +8,22 @@ class Client: NSObject {
 		case day, week, month
 	}
 	
+	let errorApi = NSError(domain: "LionShare", code: 400, userInfo: nil)
 	var timePeriod: TimePeriod = .day
 	
-	func getPrices(callback: @escaping ([Price]?) -> Void) {
+	func getPrices(callback: @escaping ([Price]?, NSError?) -> Void) {
 		
 		let request = URLRequest(url: URL(string: "https://api.lionshare.capital/api/prices?period=\(timePeriod)")!)
 		
 		httpGet(request: request) { (response, error) -> Void in
-			if error != nil {
-				print(error!)
+			if let error = error {
+				callback(nil, error)
 				return
 			}
 			
 			guard let result = response as? [String: AnyObject],
 				let data = result["data"] as? [String: AnyObject] else {
-				//TODO: Add errors
+				callback(nil, self.errorApi)
 				return
 			}
 		
@@ -38,34 +39,31 @@ class Client: NSObject {
 				
 				prices.append(price)
 			}
-			callback(prices)
+			callback(prices, nil)
 		}
 	}
 	
-	func httpGet(request: URLRequest!, callback: @escaping (_ response: AnyObject?, _ error: Error?) -> Void) {
+	func httpGet(request: URLRequest!, callback: @escaping (_ response: AnyObject?, _ error: NSError?) -> Void) {
 		let session = URLSession.shared
-		let task = session.dataTask(with: request){
-			(data, response, error) -> Void in
+		let task = session.dataTask(with: request){ (data, response, error) -> Void in
 			if error != nil {
-				callback(nil, error)
+				callback(nil, error as NSError?)
 				return
 			}
 			
-			let error = NSError(domain: "LionShare", code: 400, userInfo: nil)
-			
 			guard let data = data else {
-				callback(nil, error)
+				callback(nil, self.errorApi)
 				return
 			}
 				
 			if data.isEmpty {
-				callback(nil, error)
+				callback(nil, self.errorApi)
 			}
 			do {
 				let object:Any? = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
 				callback(object as AnyObject?, nil)
 			} catch let caught {
-				callback(nil, caught)
+				callback(nil, caught as NSError?)
 			}
 		}
 		task.resume()

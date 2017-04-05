@@ -21,6 +21,22 @@
 		CB465F8D1E49940700A0D7D4 /* PriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB465F8C1E49940700A0D7D4 /* PriceCell.swift */; };
 		CB74B90C1E945C520033A4A4 /* SFMono-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB74B90B1E945C520033A4A4 /* SFMono-Medium.otf */; };
 		CB74B90E1E94642D0033A4A4 /* SFMono-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB74B90D1E94642D0033A4A4 /* SFMono-Semibold.otf */; };
+		CB74B9181E94A3100033A4A4 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB74B9171E94A3100033A4A4 /* NotificationCenter.framework */; };
+		CB74B91B1E94A3100033A4A4 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB74B91A1E94A3100033A4A4 /* TodayViewController.swift */; };
+		CB74B91E1E94A3100033A4A4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB74B91C1E94A3100033A4A4 /* MainInterface.storyboard */; };
+		CB74B9221E94A3100033A4A4 /* LionShare Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CB74B9151E94A3100033A4A4 /* LionShare Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CB74B9271E94A3AC0033A4A4 /* LionShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA1BE3C1E9416A000FDBE3A /* LionShareKit.framework */; };
+		CB74B9291E94B9F80033A4A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB74B9281E94B9F80033A4A4 /* Constants.swift */; };
+		CB74B92A1E94BB960033A4A4 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB465F821E497B7800A0D7D4 /* Client.swift */; };
+		CB74B92B1E94BB960033A4A4 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB465F821E497B7800A0D7D4 /* Client.swift */; };
+		CB74B92C1E94BB990033A4A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB74B9281E94B9F80033A4A4 /* Constants.swift */; };
+		CB74B92D1E94BB9A0033A4A4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB74B9281E94B9F80033A4A4 /* Constants.swift */; };
+		CB74B92E1E94BB9C0033A4A4 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB465F801E49797B00A0D7D4 /* CurrencyFormatter.swift */; };
+		CB74B92F1E94BB9D0033A4A4 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB465F801E49797B00A0D7D4 /* CurrencyFormatter.swift */; };
+		CB74B9301E94BBB90033A4A4 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB465F881E49842000A0D7D4 /* Price.swift */; };
+		CB74B9311E94BBBA0033A4A4 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB465F881E49842000A0D7D4 /* Price.swift */; };
+		CB74B9321E94BBBC0033A4A4 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94143D1E4AE85900574B7E /* Currency.swift */; };
+		CB74B9331E94BBBC0033A4A4 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94143D1E4AE85900574B7E /* Currency.swift */; };
 		CB94143E1E4AE85900574B7E /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94143D1E4AE85900574B7E /* Currency.swift */; };
 		CB9414401E4AFC5400574B7E /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94143F1E4AFC5400574B7E /* CurrencyCell.swift */; };
 		CB9F3A231E4D6D2900484C23 /* EditPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F3A221E4D6D2900484C23 /* EditPortfolioViewController.swift */; };
@@ -33,6 +49,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CB74B9201E94A3100033A4A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB465F5F1E49780D00A0D7D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB74B9141E94A3100033A4A4;
+			remoteInfo = "LionShare Widget";
+		};
 		CBA1BE411E9416A000FDBE3A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CB465F5F1E49780D00A0D7D4 /* Project object */;
@@ -43,6 +66,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		CB74B9261E94A3100033A4A4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CB74B9221E94A3100033A4A4 /* LionShare Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CBA1BE481E9416A000FDBE3A /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -73,6 +107,12 @@
 		CB465F8C1E49940700A0D7D4 /* PriceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceCell.swift; sourceTree = "<group>"; };
 		CB74B90B1E945C520033A4A4 /* SFMono-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFMono-Medium.otf"; sourceTree = "<group>"; };
 		CB74B90D1E94642D0033A4A4 /* SFMono-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFMono-Semibold.otf"; sourceTree = "<group>"; };
+		CB74B9151E94A3100033A4A4 /* LionShare Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LionShare Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB74B9171E94A3100033A4A4 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		CB74B91A1E94A3100033A4A4 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		CB74B91D1E94A3100033A4A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		CB74B91F1E94A3100033A4A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB74B9281E94B9F80033A4A4 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CB94143D1E4AE85900574B7E /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		CB94143F1E4AFC5400574B7E /* CurrencyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
 		CB9F3A221E4D6D2900484C23 /* EditPortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPortfolioViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +133,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CB74B9121E94A3100033A4A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB74B9271E94A3AC0033A4A4 /* LionShareKit.framework in Frameworks */,
+				CB74B9181E94A3100033A4A4 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CBA1BE381E9416A000FDBE3A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -108,6 +157,8 @@
 			children = (
 				CB465F691E49780E00A0D7D4 /* LionShare */,
 				CBA1BE3D1E9416A000FDBE3A /* LionShareKit */,
+				CB74B9191E94A3100033A4A4 /* LionShare Widget */,
+				CB74B9161E94A3100033A4A4 /* Frameworks */,
 				CB465F681E49780E00A0D7D4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,6 +168,7 @@
 			children = (
 				CB465F671E49780E00A0D7D4 /* LionShare.app */,
 				CBA1BE3C1E9416A000FDBE3A /* LionShareKit.framework */,
+				CB74B9151E94A3100033A4A4 /* LionShare Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,7 +176,6 @@
 		CB465F691E49780E00A0D7D4 /* LionShare */ = {
 			isa = PBXGroup;
 			children = (
-				CB465F7E1E49793200A0D7D4 /* Models */,
 				CB465F7D1E49792300A0D7D4 /* Views */,
 				CB465F6A1E49780E00A0D7D4 /* AppDelegate.swift */,
 				CB465F731E49780E00A0D7D4 /* LaunchScreen.storyboard */,
@@ -159,6 +210,7 @@
 				CB94143D1E4AE85900574B7E /* Currency.swift */,
 			);
 			name = Models;
+			path = ../LionShare;
 			sourceTree = "<group>";
 		};
 		CB74B9101E94A1650033A4A4 /* Fonts */ = {
@@ -171,11 +223,47 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
-		CBA1BE3D1E9416A000FDBE3A /* LionShareKit */ = {
+		CB74B9161E94A3100033A4A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB74B9171E94A3100033A4A4 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB74B9191E94A3100033A4A4 /* LionShare Widget */ = {
+			isa = PBXGroup;
+			children = (
+				CB74B91A1E94A3100033A4A4 /* TodayViewController.swift */,
+				CB74B91C1E94A3100033A4A4 /* MainInterface.storyboard */,
+				CB74B91F1E94A3100033A4A4 /* Info.plist */,
+			);
+			path = "LionShare Widget";
+			sourceTree = "<group>";
+		};
+		CB74B9341E94BC2D0033A4A4 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				CB465F821E497B7800A0D7D4 /* Client.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		CB74B9351E94BC360033A4A4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CB74B9281E94B9F80033A4A4 /* Constants.swift */,
 				CB465F801E49797B00A0D7D4 /* CurrencyFormatter.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		CBA1BE3D1E9416A000FDBE3A /* LionShareKit */ = {
+			isa = PBXGroup;
+			children = (
+				CB465F7E1E49793200A0D7D4 /* Models */,
+				CB74B9341E94BC2D0033A4A4 /* API */,
+				CB74B9351E94BC360033A4A4 /* Utils */,
 				CBA1BE3E1E9416A000FDBE3A /* LionShareKit.h */,
 				CBA1BE3F1E9416A000FDBE3A /* Info.plist */,
 			);
@@ -204,16 +292,35 @@
 				CB465F641E49780E00A0D7D4 /* Frameworks */,
 				CB465F651E49780E00A0D7D4 /* Resources */,
 				CBA1BE481E9416A000FDBE3A /* Embed Frameworks */,
+				CB74B9261E94A3100033A4A4 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				CBA1BE421E9416A000FDBE3A /* PBXTargetDependency */,
+				CB74B9211E94A3100033A4A4 /* PBXTargetDependency */,
 			);
 			name = LionShare;
 			productName = LionShare;
 			productReference = CB465F671E49780E00A0D7D4 /* LionShare.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CB74B9141E94A3100033A4A4 /* LionShare Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB74B9231E94A3100033A4A4 /* Build configuration list for PBXNativeTarget "LionShare Widget" */;
+			buildPhases = (
+				CB74B9111E94A3100033A4A4 /* Sources */,
+				CB74B9121E94A3100033A4A4 /* Frameworks */,
+				CB74B9131E94A3100033A4A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LionShare Widget";
+			productName = "LionShare Widget";
+			productReference = CB74B9151E94A3100033A4A4 /* LionShare Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		CBA1BE3B1E9416A000FDBE3A /* LionShareKit */ = {
 			isa = PBXNativeTarget;
@@ -248,9 +355,15 @@
 						DevelopmentTeam = EXEZ76Y5F4;
 						ProvisioningStyle = Automatic;
 					};
+					CB74B9141E94A3100033A4A4 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EXEZ76Y5F4;
+						ProvisioningStyle = Automatic;
+					};
 					CBA1BE3B1E9416A000FDBE3A = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = EXEZ76Y5F4;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -270,6 +383,7 @@
 			targets = (
 				CB465F661E49780E00A0D7D4 /* LionShare */,
 				CBA1BE3B1E9416A000FDBE3A /* LionShareKit */,
+				CB74B9141E94A3100033A4A4 /* LionShare Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -285,6 +399,14 @@
 				CB465F8B1E4992D000A0D7D4 /* SFMono-Regular.otf in Resources */,
 				CB74B90C1E945C520033A4A4 /* SFMono-Medium.otf in Resources */,
 				CB465F701E49780E00A0D7D4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB74B9131E94A3100033A4A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB74B91E1E94A3100033A4A4 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +429,7 @@
 				CBA1BE361E93688E00FDBE3A /* ChartView.swift in Sources */,
 				CB94143E1E4AE85900574B7E /* Currency.swift in Sources */,
 				CB465F6D1E49780E00A0D7D4 /* PricesViewController.swift in Sources */,
+				CB74B92C1E94BB990033A4A4 /* Constants.swift in Sources */,
 				CB465F891E49842000A0D7D4 /* Price.swift in Sources */,
 				CB465F851E49811100A0D7D4 /* PortfolioViewController.swift in Sources */,
 				CB9F3A231E4D6D2900484C23 /* EditPortfolioViewController.swift in Sources */,
@@ -319,16 +442,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CB74B9111E94A3100033A4A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB74B9331E94BBBC0033A4A4 /* Currency.swift in Sources */,
+				CB74B92B1E94BB960033A4A4 /* Client.swift in Sources */,
+				CB74B92F1E94BB9D0033A4A4 /* CurrencyFormatter.swift in Sources */,
+				CB74B91B1E94A3100033A4A4 /* TodayViewController.swift in Sources */,
+				CB74B9311E94BBBA0033A4A4 /* Price.swift in Sources */,
+				CB74B92D1E94BB9A0033A4A4 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CBA1BE371E9416A000FDBE3A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB74B92A1E94BB960033A4A4 /* Client.swift in Sources */,
+				CB74B9321E94BBBC0033A4A4 /* Currency.swift in Sources */,
+				CB74B9301E94BBB90033A4A4 /* Price.swift in Sources */,
+				CB74B92E1E94BB9C0033A4A4 /* CurrencyFormatter.swift in Sources */,
+				CB74B9291E94B9F80033A4A4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CB74B9211E94A3100033A4A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB74B9141E94A3100033A4A4 /* LionShare Widget */;
+			targetProxy = CB74B9201E94A3100033A4A4 /* PBXContainerItemProxy */;
+		};
 		CBA1BE421E9416A000FDBE3A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CBA1BE3B1E9416A000FDBE3A /* LionShareKit */;
@@ -351,6 +497,14 @@
 				CB465F741E49780E00A0D7D4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CB74B91C1E94A3100033A4A4 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB74B91D1E94A3100033A4A4 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -450,6 +604,7 @@
 		CB465F7A1E49780E00A0D7D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EXEZ76Y5F4;
 				INFOPLIST_FILE = LionShare/Info.plist;
@@ -463,6 +618,7 @@
 		CB465F7B1E49780E00A0D7D4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = EXEZ76Y5F4;
 				INFOPLIST_FILE = LionShare/Info.plist;
@@ -473,9 +629,36 @@
 			};
 			name = Release;
 		};
+		CB74B9241E94A3100033A4A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = EXEZ76Y5F4;
+				INFOPLIST_FILE = "LionShare Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.14lox.LionShare.LionShare-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CB74B9251E94A3100033A4A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = EXEZ76Y5F4;
+				INFOPLIST_FILE = "LionShare Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.14lox.LionShare.LionShare-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		CBA1BE461E9416A000FDBE3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -489,6 +672,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.14lox.LionShareKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -499,6 +683,7 @@
 		CBA1BE471E9416A000FDBE3A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -539,6 +724,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		CB74B9231E94A3100033A4A4 /* Build configuration list for PBXNativeTarget "LionShare Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB74B9241E94A3100033A4A4 /* Debug */,
+				CB74B9251E94A3100033A4A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		CBA1BE451E9416A000FDBE3A /* Build configuration list for PBXNativeTarget "LionShareKit" */ = {
 			isa = XCConfigurationList;

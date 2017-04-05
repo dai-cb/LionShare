@@ -157,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UwE-0r-roN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-44" y="1740.1799100449775"/>
+            <point key="canvasLocation" x="358" y="1738"/>
         </scene>
         <!--Display Portfolio View Controller-->
         <scene sceneID="Jgb-HW-Kl5">
@@ -168,7 +168,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ERh-ht-WUT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dE8-6n-S6a">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fkq-52-teI">
@@ -180,7 +180,7 @@
                                 </connections>
                             </button>
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="4IA-Z4-hB3" userLabel="Pie Chart" customClass="PieChart" customModule="LionShare" customModuleProvider="target">
-                                <rect key="frame" x="36" y="20" width="303" height="303"/>
+                                <rect key="frame" x="36" y="40" width="303" height="303"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4IA-Z4-hB3" secondAttribute="height" multiplier="1:1" id="l4R-CS-0mb"/>
@@ -204,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mVa-tl-XwH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1036" y="1739"/>
+            <point key="canvasLocation" x="-801" y="1739"/>
         </scene>
         <!--Portfolio-->
         <scene sceneID="5tc-eT-XlZ">
@@ -364,6 +364,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4WF-dT-Vue">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="1" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="priceCell" rowHeight="90" id="V0w-w3-Kdo" customClass="PriceCell" customModule="LionShare" customModuleProvider="target">
@@ -470,10 +471,10 @@
             </objects>
             <point key="canvasLocation" x="-1808.8" y="883.80809595202402"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab bar-->
         <scene sceneID="Nbe-Cp-ywt">
             <objects>
-                <tabBarController id="bhK-PE-pWq" sceneMemberID="viewController">
+                <tabBarController title="Tab bar" id="bhK-PE-pWq" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="C2t-qD-mSV"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="5tb-3T-vdc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
@@ -537,8 +538,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Hue-Zb-Ntb"/>
+        <segue reference="9WG-6a-x6t"/>
         <segue reference="cOu-Da-bsM"/>
-        <segue reference="Db9-h7-dms"/>
+        <segue reference="j8q-tI-F97"/>
     </inferredMetricsTieBreakers>
 </document>
