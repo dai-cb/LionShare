@@ -12,32 +12,42 @@ class EditPortfolioViewController: PortfolioViewController,
 		performSegue(withIdentifier: "edit_to_show", sender: self)
 	}
 		
-	@IBAction func cancelPressed(_ sender: Any) {
-		performSegue(withIdentifier: "edit_to_show", sender: self)
-	}
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		tabBarItem = UITabBarItem(title: "Portfolio", image: nil, selectedImage: nil)
 		
 		tableView.backgroundColor = UIColor.black
-	}
-	
-	override func viewDidAppear(_ animated: Bool) {
-	
-	}
-	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
 		
+		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
 	}
 	
+	override func viewDidDisappear(_ animated: Bool) {
+		super.viewDidDisappear(animated)
+		
+		NotificationCenter.default.removeObserver(self)
+	}
+	
+	func keyboardWillShow(notification:NSNotification){
+		var userInfo = notification.userInfo!
+		var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+		keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+		
+		var contentInset = tableView.contentInset
+		contentInset.bottom = keyboardFrame.size.height - 50
+		tableView.contentInset = contentInset
+	}
+	
+	func keyboardWillHide(notification:NSNotification) {
+		tableView.contentInset = UIEdgeInsets.zero
+	}
+
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return currencies.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: "currencyCell") as? CurrencyCell else {
 			return UITableViewCell()
 		}
@@ -62,7 +72,6 @@ class EditPortfolioViewController: PortfolioViewController,
 	}
 	
 	func textFieldDidEndEditing(_ textField: UITextField) {
-		
 		let currency = currencies[textField.tag]
 		
 		if let amountText = textField.text,
@@ -73,5 +82,10 @@ class EditPortfolioViewController: PortfolioViewController,
 		Currency.save()
 		
 		tableView.reloadData()
+	}
+	
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		textField.resignFirstResponder()
+		return true
 	}
 }

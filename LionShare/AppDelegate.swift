@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  LionShare
-//
-//  Created by David Hovey on 06/02/2017.
-//  Copyright © 2017 14lox. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

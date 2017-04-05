@@ -1,6 +1,6 @@
 import UIKit
 
-class DisplayPortfolioViewController: UIViewController {
+class DisplayPortfolioViewController: PortfolioViewController {
 	
 	@IBOutlet weak var pieChart: PieChart!
 	

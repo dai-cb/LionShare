@@ -1,4 +1,3 @@
-
 import UIKit
 
 class PortfolioViewController: UIViewController {
@@ -9,12 +8,8 @@ class PortfolioViewController: UIViewController {
 		super.viewDidLoad()
 		
 		tabBarItem = UITabBarItem(title: "Portfolio", image: nil, selectedImage: nil)
-	}
-	
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
 		
-		performSegue(withIdentifier: "segue_show", sender: self)
+		navigationItem.hidesBackButton = true
 	}
 }
 

@@ -38,7 +38,7 @@ class CurrencyFormatter: NSObject {
 		
 		// Setup non standard formatters
 		truncatingFormatter.usesSignificantDigits = true
-		truncatingFormatter.maximumSignificantDigits = 5
+		truncatingFormatter.maximumSignificantDigits = 4
 		truncatingFormatter.minimumSignificantDigits = 0
 		truncatingFormatter.maximumFractionDigits = 8
 		truncatingFormatter.minimumFractionDigits = 2

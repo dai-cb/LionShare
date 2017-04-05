@@ -7,6 +7,8 @@ class PricesViewController: UIViewController,
 
 	@IBOutlet weak var tableView: UITableView!
 	
+	fileprivate let currencyFormatterOptions = CurrencyFormatterOptions()
+	
 	fileprivate var displayCurrencies = [Currency]()
 	
 	override func viewDidLoad() {
@@ -17,6 +19,8 @@ class PricesViewController: UIViewController,
 		tabBarItem = UITabBarItem(title: "Prices", image: nil, selectedImage: nil)
 		
 		tableView.backgroundColor = UIColor.black
+		
+		currencyFormatterOptions.allowTruncation = true
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
@@ -74,7 +78,7 @@ class PricesViewController: UIViewController,
 				return UITableViewCell()
 		}
 
-		cell.price.text = CurrencyFormatter.sharedInstance.formatAmount(amount: last, currency: "USD")
+		cell.price.text = CurrencyFormatter.sharedInstance.formatAmount(amount: last, currency: "USD", options: currencyFormatterOptions)
 		
 		let (difference, sign) = price.difference()
 		
