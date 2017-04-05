@@ -74,6 +74,4 @@ class EditPortfolioViewController: PortfolioViewController,
 		
 		tableView.reloadData()
 	}
-	
-	override var prefersStatusBarHidden: Bool { get { return true } }
 }

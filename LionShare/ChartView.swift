@@ -2,7 +2,6 @@ import UIKit
 import Foundation
 
 protocol ChartsViewDatasource {
-	//func numberOfPoints(_ chart: ChartView) -> Int
 	func chart(_ chart: ChartView, valueForPoint index: Int) -> CGFloat
 }
 
@@ -14,34 +13,20 @@ protocol ChartsViewDatasource {
 		}
 	}
 	
-	var graphSize = CGSize.zero
-	var maxAmount: CGFloat = 0
-	var minAmount: CGFloat = 0
-	var yAxisValues: [CGFloat] = []
-	var xAxisValues: [CGFloat] = []
-	var lineLayer = CAShapeLayer()
-	var zeroStateLinePath = UIBezierPath()
+	fileprivate var graphSize = CGSize.zero
+	fileprivate var maxAmount: CGFloat = 0
+	fileprivate var minAmount: CGFloat = 0
+	fileprivate var yAxisValues: [CGFloat] = []
+	fileprivate var xAxisValues: [CGFloat] = []
+	fileprivate var lineLayer = CAShapeLayer()
+	fileprivate var zeroStateLinePath = UIBezierPath()
 	var lineColour = UIColor.white
-	
-//	func numberOfDataPoints() -> Int? {
-//		guard let dataSource = prices else {
-//			return nil
-//		}
-//		
-//		return dataSource.count
-//	}
 	
 	func reloadData() {
 		
 		guard prices.count > 0 else {
 			return
 		}
-		
-//		if let numDataPoints = prices, numDataPoints <= 0 {
-//			//errorLabel.isHidden = false
-//		} else {
-//			//errorLabel.isHidden = true
-//		}
 		
 		graphSize = CGSize(width: self.frame.size.width, height: self.frame.size.height)
 		
@@ -79,7 +64,6 @@ protocol ChartsViewDatasource {
 	}
 	
 	func drawLine() {
-		
 		if prices.count > 0 && prices.count == xAxisValues.count && prices.count == yAxisValues.count {
 			let graphPath = UIBezierPath()
 			
@@ -103,61 +87,6 @@ protocol ChartsViewDatasource {
 			lineLayer.path = nil
 		}
 		setNeedsDisplay()
-	}
-	
-	override func draw(_ rect: CGRect) {
-		super.draw(rect)
-		
-//		guard let path = lineLayer.path else {
-//			return
-//		}
-//		
-//		guard let numberOfPoints = numberOfDataPoints(), numberOfPoints > 0 else {
-//			return
-//		}
-//		
-//		guard let context = UIGraphicsGetCurrentContext() else { return }
-//		
-//		context.saveGState()
-//		UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main.scale)
-//		let imageContext = UIGraphicsGetCurrentContext()
-//		
-//		let colorSpace = CGColorSpaceCreateDeviceRGB()
-//		let colorLocations: [CGFloat] = [0, 1]
-//		
-////		let blockColors = [UIColor.red.cgColor, UIColor.red.cgColor]
-////		let block = CGGradient(colorsSpace: colorSpace, colors: blockColors as CFArray, locations: colorLocations)
-////		
-////		let blockStartPoint = CGPoint(x:gradientPadding * 2, y:self.bounds.height * 0.5)
-////		let blockEndPoint = CGPoint(x:self.bounds.width, y:self.bounds.height * 0.5)
-////		imageContext!.drawLinearGradient(block!, start: blockStartPoint, end: blockEndPoint, options: CGGradientDrawingOptions(rawValue: 0))
-////		
-////		let gradientMaskcolors = [UIColor.clear.cgColor, UIColor.blue.cgColor]
-////		let gradientMask = CGGradient(colorsSpace: colorSpace, colors: gradientMaskcolors as CFArray, locations: colorLocations)
-////		
-////		let gradientMaskStartPoint = CGPoint(x: gradientPadding, y: self.bounds.height * 0.5)
-////		let gradientMaskEndPoint = CGPoint(x:gradientPadding * 2, y:self.bounds.height * 0.5)
-////		imageContext!.drawLinearGradient(gradientMask!, start: gradientMaskStartPoint, end: gradientMaskEndPoint, options: CGGradientDrawingOptions(rawValue: 0))
-//		
-//		let mask = UIGraphicsGetCurrentContext()!.makeImage()
-//		UIGraphicsEndImageContext()
-//		
-//		context.clip(to: self.bounds, mask: mask!)
-//		
-//		let clippingPath = UIBezierPath(cgPath: path)
-//		clippingPath.addLine(to: CGPoint(x:xAxisValues[numberOfPoints - 1], y:graphSize.height))
-//		clippingPath.addLine(to: CGPoint(x:xAxisValues[0], y:graphSize.height))
-//		clippingPath.close()
-//		clippingPath.addClip()
-//		
-////		let colors = [UIColor(white: 1, alpha: 0.4).cgColor, UIColor.clear.cgColor]
-////		let gradient = CGGradient(colorsSpace: colorSpace, colors: colors as CFArray, locations: colorLocations)
-////		
-////		let startPoint = CGPoint.zero
-////		let endPoint = CGPoint(x:0, y:self.bounds.height)
-////		context.drawLinearGradient(gradient!, start: startPoint, end: endPoint, options: CGGradientDrawingOptions(rawValue: 0))
-//		
-//		context.restoreGState()
 	}
 	
 	func calculateAmountYPosition (_ pointAmount: CGFloat) -> CGFloat {

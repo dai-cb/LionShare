@@ -14,9 +14,7 @@ class PortfolioViewController: UIViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
-		performSegue(withIdentifier: "segue_edit", sender: self)
+		performSegue(withIdentifier: "segue_show", sender: self)
 	}
-	
-	override var prefersStatusBarHidden: Bool { get { return true } }
 }
 

@@ -19,6 +19,8 @@
 		CB465F891E49842000A0D7D4 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB465F881E49842000A0D7D4 /* Price.swift */; };
 		CB465F8B1E4992D000A0D7D4 /* SFMono-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB465F8A1E4992D000A0D7D4 /* SFMono-Regular.otf */; };
 		CB465F8D1E49940700A0D7D4 /* PriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB465F8C1E49940700A0D7D4 /* PriceCell.swift */; };
+		CB74B90C1E945C520033A4A4 /* SFMono-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB74B90B1E945C520033A4A4 /* SFMono-Medium.otf */; };
+		CB74B90E1E94642D0033A4A4 /* SFMono-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CB74B90D1E94642D0033A4A4 /* SFMono-Semibold.otf */; };
 		CB94143E1E4AE85900574B7E /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94143D1E4AE85900574B7E /* Currency.swift */; };
 		CB9414401E4AFC5400574B7E /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB94143F1E4AFC5400574B7E /* CurrencyCell.swift */; };
 		CB9F3A231E4D6D2900484C23 /* EditPortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9F3A221E4D6D2900484C23 /* EditPortfolioViewController.swift */; };
@@ -27,6 +29,7 @@
 		CBA1BE401E9416A000FDBE3A /* LionShareKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CBA1BE3E1E9416A000FDBE3A /* LionShareKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBA1BE431E9416A000FDBE3A /* LionShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA1BE3C1E9416A000FDBE3A /* LionShareKit.framework */; };
 		CBA1BE441E9416A000FDBE3A /* LionShareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBA1BE3C1E9416A000FDBE3A /* LionShareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CBA1BE4A1E9430B100FDBE3A /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA1BE491E9430B100FDBE3A /* PieChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,13 +64,15 @@
 		CB465F711E49780E00A0D7D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB465F741E49780E00A0D7D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB465F761E49780E00A0D7D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB465F801E49797B00A0D7D4 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		CB465F801E49797B00A0D7D4 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrencyFormatter.swift; path = ../LionShare/CurrencyFormatter.swift; sourceTree = "<group>"; };
 		CB465F821E497B7800A0D7D4 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Client.swift; path = ../LionShare/Client.swift; sourceTree = "<group>"; };
 		CB465F841E49811100A0D7D4 /* PortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		CB465F861E49812900A0D7D4 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		CB465F881E49842000A0D7D4 /* Price.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		CB465F8A1E4992D000A0D7D4 /* SFMono-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFMono-Regular.otf"; sourceTree = "<group>"; };
 		CB465F8C1E49940700A0D7D4 /* PriceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceCell.swift; sourceTree = "<group>"; };
+		CB74B90B1E945C520033A4A4 /* SFMono-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFMono-Medium.otf"; sourceTree = "<group>"; };
+		CB74B90D1E94642D0033A4A4 /* SFMono-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFMono-Semibold.otf"; sourceTree = "<group>"; };
 		CB94143D1E4AE85900574B7E /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
 		CB94143F1E4AFC5400574B7E /* CurrencyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
 		CB9F3A221E4D6D2900484C23 /* EditPortfolioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPortfolioViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +81,7 @@
 		CBA1BE3C1E9416A000FDBE3A /* LionShareKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LionShareKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBA1BE3E1E9416A000FDBE3A /* LionShareKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LionShareKit.h; sourceTree = "<group>"; };
 		CBA1BE3F1E9416A000FDBE3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBA1BE491E9430B100FDBE3A /* PieChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,24 +124,15 @@
 		CB465F691E49780E00A0D7D4 /* LionShare */ = {
 			isa = PBXGroup;
 			children = (
-				CB465F7F1E49796500A0D7D4 /* Utils */,
 				CB465F7E1E49793200A0D7D4 /* Models */,
 				CB465F7D1E49792300A0D7D4 /* Views */,
-				CB465F7C1E49791C00A0D7D4 /* API */,
 				CB465F6A1E49780E00A0D7D4 /* AppDelegate.swift */,
 				CB465F731E49780E00A0D7D4 /* LaunchScreen.storyboard */,
-				CB465F8A1E4992D000A0D7D4 /* SFMono-Regular.otf */,
+				CB74B9101E94A1650033A4A4 /* Fonts */,
 				CB465F711E49780E00A0D7D4 /* Assets.xcassets */,
 				CB465F761E49780E00A0D7D4 /* Info.plist */,
 			);
 			path = LionShare;
-			sourceTree = "<group>";
-		};
-		CB465F7C1E49791C00A0D7D4 /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = API;
 			sourceTree = "<group>";
 		};
 		CB465F7D1E49792300A0D7D4 /* Views */ = {
@@ -146,6 +143,7 @@
 				CB465F8C1E49940700A0D7D4 /* PriceCell.swift */,
 				CB94143F1E4AFC5400574B7E /* CurrencyCell.swift */,
 				CBA1BE351E93688E00FDBE3A /* ChartView.swift */,
+				CBA1BE491E9430B100FDBE3A /* PieChart.swift */,
 				CB465F841E49811100A0D7D4 /* PortfolioViewController.swift */,
 				CB9F3A221E4D6D2900484C23 /* EditPortfolioViewController.swift */,
 				CB9F3A241E4D6D3C00484C23 /* DisplayPortfolioViewController.swift */,
@@ -163,18 +161,21 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		CB465F7F1E49796500A0D7D4 /* Utils */ = {
+		CB74B9101E94A1650033A4A4 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				CB465F801E49797B00A0D7D4 /* CurrencyFormatter.swift */,
+				CB74B90B1E945C520033A4A4 /* SFMono-Medium.otf */,
+				CB465F8A1E4992D000A0D7D4 /* SFMono-Regular.otf */,
+				CB74B90D1E94642D0033A4A4 /* SFMono-Semibold.otf */,
 			);
-			name = Utils;
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		CBA1BE3D1E9416A000FDBE3A /* LionShareKit */ = {
 			isa = PBXGroup;
 			children = (
 				CB465F821E497B7800A0D7D4 /* Client.swift */,
+				CB465F801E49797B00A0D7D4 /* CurrencyFormatter.swift */,
 				CBA1BE3E1E9416A000FDBE3A /* LionShareKit.h */,
 				CBA1BE3F1E9416A000FDBE3A /* Info.plist */,
 			);
@@ -280,7 +281,9 @@
 			files = (
 				CB465F751E49780E00A0D7D4 /* LaunchScreen.storyboard in Resources */,
 				CB465F721E49780E00A0D7D4 /* Assets.xcassets in Resources */,
+				CB74B90E1E94642D0033A4A4 /* SFMono-Semibold.otf in Resources */,
 				CB465F8B1E4992D000A0D7D4 /* SFMono-Regular.otf in Resources */,
+				CB74B90C1E945C520033A4A4 /* SFMono-Medium.otf in Resources */,
 				CB465F701E49780E00A0D7D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA1BE4A1E9430B100FDBE3A /* PieChart.swift in Sources */,
 				CB9414401E4AFC5400574B7E /* CurrencyCell.swift in Sources */,
 				CBA1BE361E93688E00FDBE3A /* ChartView.swift in Sources */,
 				CB94143E1E4AE85900574B7E /* Currency.swift in Sources */,
@@ -543,6 +547,7 @@
 				CBA1BE471E9416A000FDBE3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

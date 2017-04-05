@@ -6,7 +6,7 @@ class PricesViewController: UIViewController,
 
 	@IBOutlet weak var tableView: UITableView!
 	
-	var displayCurrencies = [Currency]()
+	fileprivate var displayCurrencies = [Currency]()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -27,8 +27,6 @@ class PricesViewController: UIViewController,
 	}
 	
 	fileprivate func fetchPrices() {
-		
-		// fetch timerange
 		Client.shared.getPrices() { (prices) in
 			defer {
 				DispatchQueue.main.async {
@@ -55,7 +53,6 @@ class PricesViewController: UIViewController,
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: "priceCell") as? PriceCell else {
 			return UITableViewCell()
 		}
@@ -66,13 +63,12 @@ class PricesViewController: UIViewController,
 		
 		guard let price = currency.price,
 			let prices = price.prices,
-			let last = prices.last else {
+			let last = prices.last,
+			let colour = currency.colour else {
 				return UITableViewCell()
 		}
 
 		cell.price.text = CurrencyFormatter.sharedInstance.formatAmount(amount: last, currency: "USD")
-		
-		//cell.price.textColor = UIColor(netHex:currency.colour!)
 		
 		let (difference, sign) = price.difference()
 		
@@ -80,11 +76,9 @@ class PricesViewController: UIViewController,
 		
 		cell.difference.textColor = sign == .plus ? UIColor.green : UIColor.red
 		
-		cell.dot.backgroundColor = UIColor(netHex:currency.colour!)
-		cell.chart.lineColour = UIColor(netHex:currency.colour!)
+		cell.dot.backgroundColor = UIColor(netHex:colour)
+		cell.chart.lineColour = UIColor(netHex:colour)
 		cell.chart.prices = prices
-		
-		// handle random colour if no colour set
 		
 		return cell
 	}
@@ -92,8 +86,6 @@ class PricesViewController: UIViewController,
 	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
 		cell.backgroundColor = UIColor.black
 	}
-	
-	override var prefersStatusBarHidden: Bool { get { return true } }
 }
 
 extension UIColor {

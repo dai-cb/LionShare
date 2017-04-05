@@ -26,6 +26,4 @@ class SettingsViewController: UIViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 	}
-	
-	override var prefersStatusBarHidden: Bool { get { return true } }
 }
