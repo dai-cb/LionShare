@@ -12,7 +12,6 @@ class DisplayPortfolioViewController: PortfolioViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-			
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -27,8 +26,6 @@ class DisplayPortfolioViewController: PortfolioViewController {
 	
 	func buildPie(currencies: [Currency]) {
 	
-		print("currencies = \(currencies)")
-		
 		var slices: [PieChart.Slice] = []
 		
 		for currency in currencies {

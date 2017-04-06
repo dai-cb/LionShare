@@ -32,11 +32,8 @@ class Currency: NSObject, NSCoding {
 	
 	static var displayCurrencies: [Currency] {
 		get {
-			var temp = [Currency]()
-			for currency in Currency.currencies {
-				if currency.isHidden == false {
-					temp.append(currency)
-				}
+			let temp = Currency.currencies.filter { (currency) -> Bool in
+				currency.isHidden == false
 			}
 			return temp
 		}
@@ -44,15 +41,21 @@ class Currency: NSObject, NSCoding {
 	
 	static var portfolioCurrencies: [Currency] {
 		get {
-			var temp = [Currency]()
-			
-			for currency in self.displayCurrencies {
+			let temp = Currency.displayCurrencies.filter { (currency) -> Bool in
 				if let amount = currency.portfolioAmount,
 					amount > 0 {
-					temp.append(currency)
+					return true
 				}
+				return false
+			}
+			
+			for currency in temp {
+				
+				guard let amount = currency.portfolioAmount,
+					let colour = currency.colour else { continue }
 			}
 			return temp
+				
 		}
 	}
 
@@ -116,6 +119,7 @@ class Currency: NSObject, NSCoding {
 			return
 		}
 		defaults.set(data, forKey: keyCurrencies)
+		defaults.synchronize()
 	}
 	
 	static func loadCurrencies() {

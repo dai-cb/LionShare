@@ -27,6 +27,7 @@ import UIKit
 				for slice in slices {
 					total = slice.value + total
 				}
+				//setNeedsDisplay()
 			}
 		}
 	

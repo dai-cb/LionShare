@@ -27,6 +27,8 @@ class PricesViewController: UIViewController,
 		tableView.tableFooterView = UIView(frame: CGRect.zero)
 		
 		currencyFormatterOptions.allowTruncation = true
+		
+		edgesForExtendedLayout = UIRectEdge()
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
@@ -52,6 +54,7 @@ class PricesViewController: UIViewController,
 	}
 	
 	func stopSocket() {
+		// Kill is straight away
 		socket.disconnect(forceTimeout: -1)
 	}
 	
@@ -63,9 +66,7 @@ class PricesViewController: UIViewController,
 		print("websocket is disconnected: \(String(describing: error?.localizedDescription))")
 	}
 	
-	func websocketDidReceiveMessage(socket: WebSocket, text: String) {
-		//print("got some text: \(text)")
-		
+	func websocketDidReceiveMessage(socket: WebSocket, text: String) {		
 		guard let latest = convert(text: text),
 			let symbol = latest["cryptoCurrency"] as? String,
 			let price = latest["price"] as? Double else {

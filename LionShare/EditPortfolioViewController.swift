@@ -7,18 +7,18 @@ class EditPortfolioViewController: PortfolioViewController,
 								   UITextFieldDelegate {
 	
 	@IBOutlet weak var tableView: UITableView!
-	@IBAction func savePressed(_ sender: Any) {
-		
-		Currency.save()
-		
-		performSegue(withIdentifier: "edit_to_show", sender: self)
-	}
-		
+	
+	var textFieldInUse: UITextField?
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 	
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+		
+		tableView.backgroundColor = UIColor.black
+		
+		edgesForExtendedLayout = UIRectEdge()
 	}
 	
 	override func viewDidDisappear(_ animated: Bool) {
@@ -52,14 +52,19 @@ class EditPortfolioViewController: PortfolioViewController,
 		
 		let currency = currencies[indexPath.row]
 		
+		guard let name = currency.name,
+			let colour = currency.colour else {
+				return UITableViewCell()
+		}
+		
 		if let amount = currency.portfolioAmount {
 			cell.textField.text = "\(amount)"
 		}
 		
-		cell.name.text = currency.name
+		cell.name.text = name
 		cell.textField.delegate = self
 		cell.textField.tag = indexPath.row
-		
+		cell.dot.backgroundColor = UIColor(hex:colour)
 		cell.symbol.text = currency.symbol
 		
 		return cell
@@ -70,20 +75,41 @@ class EditPortfolioViewController: PortfolioViewController,
 	}
 	
 	func textFieldDidEndEditing(_ textField: UITextField) {
-		let currency = currencies[textField.tag]
 		
-		if let amountText = textField.text,
-			let amount = Double(amountText) {
-				currency.portfolioAmount = amount
-		}
+		saveAmountFrom(textField: textField)
 		
-		Currency.save()
+		textFieldInUse = nil
 		
 		tableView.reloadData()
+	}
+	
+	func textFieldDidBeginEditing(_ textField: UITextField) {
+		textFieldInUse = textField
 	}
 	
 	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 		textField.resignFirstResponder()
 		return true
 	}
+	
+	func saveAmountFrom(textField: UITextField) {
+		
+		let currency = currencies[textField.tag]
+		
+		if let amountText = textField.text,
+			let amount = Double(amountText) {
+			currency.portfolioAmount = amount
+		}
+		
+		Currency.save()
+	}
+	
+	@IBAction func savePressed(_ sender: Any) {
+		if let textField = textFieldInUse {
+			saveAmountFrom(textField: textField)
+		}
+		
+		self.performSegue(withIdentifier: "edit_to_show", sender: self)
+	}
+
 }

@@ -10,36 +10,18 @@ class AssetListController: UIViewController,
 	
 	fileprivate var currencies = [Currency]()
 	
-	var areAllSelectedOnLaunch: Bool = false
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		Currency.loadCurrencies()
+
+		edgesForExtendedLayout = UIRectEdge()
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
 		currencies = Currency.currencies
-		
-		var total = 0
-		for currency in currencies {
-			guard let isHidden =  currency.isHidden else { continue }
-			
-			if !isHidden {
-				total += 1
-			}
-		}
-		
-		if total == 0 {
-			areAllSelectedOnLaunch = false
-		} else if total == currencies.count {
-			areAllSelectedOnLaunch = true
-		}
-		
-		print("total = \(total)")
-		print("currencies = \(currencies.count)")
 		
 		tableView.reloadData()
 	}
@@ -71,10 +53,11 @@ class AssetListController: UIViewController,
 		}
 		
 		if indexPath.section == 0 {
-			cell.name.text = "Select All"
+			cell.name.text = "Select"
 			cell.dot.isHidden = true
-			cell.addSwitch.tag = -1
-			cell.addSwitch.isOn = !areAllSelectedOnLaunch
+			cell.addSwitch.isHidden = true
+			cell.allButton.isHidden = false
+			cell.noneButton.isHidden = false
 			return cell
 		}
 		
@@ -87,9 +70,13 @@ class AssetListController: UIViewController,
 		}
 		
 		cell.name.text = name
+		cell.addSwitch.isHidden = false
 		cell.addSwitch.isOn = !isHidden
 		cell.addSwitch.tag = indexPath.row
 		cell.dot.backgroundColor = UIColor(hex:colour)
+		cell.dot.isHidden = false
+		cell.allButton.isHidden = true
+		cell.noneButton.isHidden = true
 		
 		return cell
 	}
@@ -99,7 +86,6 @@ class AssetListController: UIViewController,
 	}
 	
 	@IBAction func switchValueChanged(_ addSwitch: UISwitch) {
-		
 		if addSwitch.tag == -1 {
 			for assetCell in tableView.visibleCells {
 				guard let cell = assetCell as? AssetCell else { return }
@@ -120,5 +106,27 @@ class AssetListController: UIViewController,
 		currency.isHidden = !addSwitch.isOn
 		
 		Currency.save()
+	}
+	
+	@IBAction func allButtonPressed(_ button: UIButton) {
+		selectAllCells(true)
+	}
+	
+	@IBAction func noneButtonPressed(_ button: UIButton) {
+		selectAllCells(false)
+	}
+	
+	func selectAllCells(_ isSelectAll:Bool) {
+		for assetCell in tableView.visibleCells {
+			guard let cell = assetCell as? AssetCell else { return }
+			cell.addSwitch.setOn(isSelectAll, animated: true)
+		}
+		
+		for currency in currencies {
+			currency.isHidden = !isSelectAll
+		}
+		Currency.save()
+		Currency.loadCurrencies()
+		currencies = Currency.currencies
 	}
 }
