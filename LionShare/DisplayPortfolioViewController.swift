@@ -32,10 +32,7 @@ class DisplayPortfolioViewController: PortfolioViewController {
 		var slices: [PieChart.Slice] = []
 		
 		for currency in currencies {
-				print("currency = \(currency)")
-				print("name = \(currency.name)")
-				print("amount = \(currency.portfolioAmount)")
-			
+
 			guard let amount = currency.portfolioAmount,
 				let colour = currency.colour else { continue }
 			

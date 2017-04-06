@@ -22,7 +22,8 @@ class PricesViewController: UIViewController,
 		
 		Currency.loadCurrencies()
 		
-		tabBarItem = UITabBarItem(title: "Prices", image: nil, selectedImage: nil)
+		tabBarItem.imageInsets = UIEdgeInsets(top: 5.5, left: 0, bottom: -5.5, right: 0)
+		tabBarItem.title = nil
 		
 		tableView.backgroundColor = UIColor.black
 		
@@ -58,7 +59,7 @@ class PricesViewController: UIViewController,
 	}
 	
 	func websocketDidDisconnect(socket: WebSocket, error: NSError?) {
-		print("websocket is disconnected: \(error?.localizedDescription)")
+		print("websocket is disconnected: \(String(describing: error?.localizedDescription))")
 	}
 	
 	func websocketDidReceiveMessage(socket: WebSocket, text: String) {
