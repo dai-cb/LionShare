@@ -1,4 +1,5 @@
 import UIKit
+import Crashlytics
 
 class SettingsViewController: UIViewController {
 	
@@ -15,15 +16,5 @@ class SettingsViewController: UIViewController {
 		default:
 			break
 		}
-	}
-	
-	override func viewDidLoad() {
-		super.viewDidLoad()
-		
-		tabBarItem = UITabBarItem(title: "Settings", image: nil, selectedImage: nil)
-	}
-	
-	override func viewDidAppear(_ animated: Bool) {
-		super.viewDidAppear(animated)
 	}
 }

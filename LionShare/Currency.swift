@@ -57,6 +57,7 @@ class Currency: NSObject, NSCoding {
 	}
 
 	static var savedCurrencies = [Currency]()
+	static let appGroup = "group.com.14lox.lionshare"
 	
 	var name: String?
 	var symbol: String?
@@ -110,13 +111,20 @@ class Currency: NSObject, NSCoding {
 	
 	static func save() {
 		let data  = NSKeyedArchiver.archivedData(withRootObject: Currency.currencies)
-		let defaults = UserDefaults.standard
+		guard let defaults = UserDefaults(suiteName: appGroup) else {
+			print("Problem saving")
+			return
+		}
 		defaults.set(data, forKey: keyCurrencies)
 	}
 	
 	static func loadCurrencies() {
-		guard let data = UserDefaults.standard.object(forKey: keyCurrencies) as? Data,
-			let savedCurrencies = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Currency] else { return }
+		guard let defaults = UserDefaults(suiteName: appGroup),
+			let data = defaults.object(forKey: keyCurrencies) as? Data,
+			let savedCurrencies = NSKeyedUnarchiver.unarchiveObject(with: data) as? [Currency] else {
+				print("Problem loading currencies")
+				return
+		}
 			
 		for saved in savedCurrencies {
 			for currency in currencies {

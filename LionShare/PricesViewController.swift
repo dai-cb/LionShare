@@ -24,6 +24,7 @@ class PricesViewController: UIViewController,
 		tabBarItem.title = nil
 		
 		tableView.backgroundColor = UIColor.black
+		tableView.tableFooterView = UIView(frame: CGRect.zero)
 		
 		currencyFormatterOptions.allowTruncation = true
 	}
@@ -87,11 +88,17 @@ class PricesViewController: UIViewController,
 		
 		guard let cell = tableView.cellForRow(at: indexPath) as? PriceCell else { return }
 		
-		cell.dot.alpha = 0
+		hideElements(cell, hide: true)
 		
 		UIView.animate(withDuration: 0.7) {
-			cell.dot.alpha = 1
+			self.hideElements(cell, hide: false)
 		}
+	}
+	
+	fileprivate func hideElements(_ cell: PriceCell, hide: Bool) {
+		cell.dot.alpha = hide ? 0 : 1
+		cell.price.alpha = hide ? 0 : 1
+		cell.difference.alpha = hide ? 0 : 1
 	}
 	
 	func convert(text: String) -> [String: Any]? {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F3285C68911EB640C24C9B9 /* Pods_LionShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5521521F64E4F06F5BD87969 /* Pods_LionShare.framework */; };
+		94EE7A551EBE0A4530E264D0 /* Pods_LionShare_Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B95C91844A9140E2AB90BE4 /* Pods_LionShare_Widget.framework */; };
 		CB4166BC1E95C9250088EE62 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4166BB1E95C9250088EE62 /* TabBarController.swift */; };
 		CB4166C11E96153B0088EE62 /* AssetListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4166C01E96153B0088EE62 /* AssetListController.swift */; };
 		CB4166C31E9619B70088EE62 /* AssetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4166C21E9619B70088EE62 /* AssetCell.swift */; };
@@ -50,6 +51,7 @@
 		CBA1BE431E9416A000FDBE3A /* LionShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBA1BE3C1E9416A000FDBE3A /* LionShareKit.framework */; };
 		CBA1BE441E9416A000FDBE3A /* LionShareKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CBA1BE3C1E9416A000FDBE3A /* LionShareKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CBA1BE4A1E9430B100FDBE3A /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA1BE491E9430B100FDBE3A /* PieChart.swift */; };
+		F771B604FB0092079636DE79 /* Pods_LionShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7CF3CC53D917BDC8A023D4 /* Pods_LionShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,11 +98,19 @@
 
 /* Begin PBXFileReference section */
 		0685D5E233E9B38194DFE4DD /* Pods-LionShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LionShare.release.xcconfig"; path = "Pods/Target Support Files/Pods-LionShare/Pods-LionShare.release.xcconfig"; sourceTree = "<group>"; };
+		09C6EEFF07BBB45998C56BCC /* Pods-LionShareKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LionShareKit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LionShareKit/Pods-LionShareKit.debug.xcconfig"; sourceTree = "<group>"; };
+		2A7966578F610C7B4602BDB4 /* Pods-LionShare Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LionShare Widget.release.xcconfig"; path = "Pods/Target Support Files/Pods-LionShare Widget/Pods-LionShare Widget.release.xcconfig"; sourceTree = "<group>"; };
+		406558B7B193D46673BAE642 /* Pods-LionShare Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LionShare Widget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LionShare Widget/Pods-LionShare Widget.debug.xcconfig"; sourceTree = "<group>"; };
 		5521521F64E4F06F5BD87969 /* Pods_LionShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LionShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B54814C0CD9614B58A88DD5 /* Pods-LionShareKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LionShareKit.release.xcconfig"; path = "Pods/Target Support Files/Pods-LionShareKit/Pods-LionShareKit.release.xcconfig"; sourceTree = "<group>"; };
 		74ADCEC09F25D83E098D1BA1 /* Pods-LionShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LionShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LionShare/Pods-LionShare.debug.xcconfig"; sourceTree = "<group>"; };
+		8B95C91844A9140E2AB90BE4 /* Pods_LionShare_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LionShare_Widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE7CF3CC53D917BDC8A023D4 /* Pods_LionShareKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LionShareKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4166BB1E95C9250088EE62 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		CB4166C01E96153B0088EE62 /* AssetListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetListController.swift; sourceTree = "<group>"; };
 		CB4166C21E9619B70088EE62 /* AssetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetCell.swift; sourceTree = "<group>"; };
+		CB4166C41E962C5F0088EE62 /* LionShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LionShare.entitlements; sourceTree = "<group>"; };
+		CB4166C51E962C7C0088EE62 /* LionShare Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "LionShare Widget.entitlements"; sourceTree = "<group>"; };
 		CB465F671E49780E00A0D7D4 /* LionShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LionShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB465F6A1E49780E00A0D7D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB465F6C1E49780E00A0D7D4 /* PricesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +160,7 @@
 			files = (
 				CB74B9271E94A3AC0033A4A4 /* LionShareKit.framework in Frameworks */,
 				CB74B9181E94A3100033A4A4 /* NotificationCenter.framework in Frameworks */,
+				94EE7A551EBE0A4530E264D0 /* Pods_LionShare_Widget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F771B604FB0092079636DE79 /* Pods_LionShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +180,10 @@
 			children = (
 				74ADCEC09F25D83E098D1BA1 /* Pods-LionShare.debug.xcconfig */,
 				0685D5E233E9B38194DFE4DD /* Pods-LionShare.release.xcconfig */,
+				406558B7B193D46673BAE642 /* Pods-LionShare Widget.debug.xcconfig */,
+				2A7966578F610C7B4602BDB4 /* Pods-LionShare Widget.release.xcconfig */,
+				09C6EEFF07BBB45998C56BCC /* Pods-LionShareKit.debug.xcconfig */,
+				6B54814C0CD9614B58A88DD5 /* Pods-LionShareKit.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -229,6 +245,7 @@
 		CB465F691E49780E00A0D7D4 /* LionShare */ = {
 			isa = PBXGroup;
 			children = (
+				CB4166C41E962C5F0088EE62 /* LionShare.entitlements */,
 				CB465F7D1E49792300A0D7D4 /* Views */,
 				CB465F6A1E49780E00A0D7D4 /* AppDelegate.swift */,
 				CB465F731E49780E00A0D7D4 /* LaunchScreen.storyboard */,
@@ -276,6 +293,8 @@
 			children = (
 				CB74B9171E94A3100033A4A4 /* NotificationCenter.framework */,
 				5521521F64E4F06F5BD87969 /* Pods_LionShare.framework */,
+				8B95C91844A9140E2AB90BE4 /* Pods_LionShare_Widget.framework */,
+				BE7CF3CC53D917BDC8A023D4 /* Pods_LionShareKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -283,6 +302,7 @@
 		CB74B9191E94A3100033A4A4 /* LionShare Widget */ = {
 			isa = PBXGroup;
 			children = (
+				CB4166C51E962C7C0088EE62 /* LionShare Widget.entitlements */,
 				CB74B91A1E94A3100033A4A4 /* TodayViewController.swift */,
 				CB74B91C1E94A3100033A4A4 /* MainInterface.storyboard */,
 				CB74B91F1E94A3100033A4A4 /* Info.plist */,
@@ -345,6 +365,7 @@
 				CB74B9261E94A3100033A4A4 /* Embed App Extensions */,
 				C6E8802F6E58AF978F3C05FA /* [CP] Embed Pods Frameworks */,
 				E3DEBBD24FFCF89E5F6A41B5 /* [CP] Copy Pods Resources */,
+				CB4166C61E96BA340088EE62 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -361,9 +382,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB74B9231E94A3100033A4A4 /* Build configuration list for PBXNativeTarget "LionShare Widget" */;
 			buildPhases = (
+				460B0EE57B0C80FCA755B8EE /* [CP] Check Pods Manifest.lock */,
 				CB74B9111E94A3100033A4A4 /* Sources */,
 				CB74B9121E94A3100033A4A4 /* Frameworks */,
 				CB74B9131E94A3100033A4A4 /* Resources */,
+				63690128D6D52736AEF2E68D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -378,10 +401,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CBA1BE451E9416A000FDBE3A /* Build configuration list for PBXNativeTarget "LionShareKit" */;
 			buildPhases = (
+				02BDBA4DF7D08EEF50623E3A /* [CP] Check Pods Manifest.lock */,
 				CBA1BE371E9416A000FDBE3A /* Sources */,
 				CBA1BE381E9416A000FDBE3A /* Frameworks */,
 				CBA1BE391E9416A000FDBE3A /* Headers */,
 				CBA1BE3A1E9416A000FDBE3A /* Resources */,
+				4A488FCD572CB50597495EDF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -406,11 +431,21 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = EXEZ76Y5F4;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					CB74B9141E94A3100033A4A4 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = EXEZ76Y5F4;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					CBA1BE3B1E9416A000FDBE3A = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -472,6 +507,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		02BDBA4DF7D08EEF50623E3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		460B0EE57B0C80FCA755B8EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4A488FCD572CB50597495EDF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LionShareKit/Pods-LionShareKit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		552A2E649C14B4B6674D4723 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -485,6 +565,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		63690128D6D52736AEF2E68D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LionShare Widget/Pods-LionShare Widget-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C6E8802F6E58AF978F3C05FA /* [CP] Embed Pods Frameworks */ = {
@@ -501,6 +596,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LionShare/Pods-LionShare-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		CB4166C61E96BA340088EE62 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 2a21019d2df9a0b2545e4fe4b80b4d6de1555c83 ebf49c01fe5eaf6626f9e5cf6e2cce17bb3523d7334519bb11b8317ca4cb2198";
 		};
 		E3DEBBD24FFCF89E5F6A41B5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -710,10 +818,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LionShare/LionShare.entitlements;
 				DEVELOPMENT_TEAM = EXEZ76Y5F4;
 				INFOPLIST_FILE = LionShare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.14lox.LionShare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.14lox.LionShareCapital;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -725,10 +834,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LionShare/LionShare.entitlements;
 				DEVELOPMENT_TEAM = EXEZ76Y5F4;
 				INFOPLIST_FILE = LionShare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.14lox.LionShare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.14lox.LionShareCapital;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -736,11 +846,13 @@
 		};
 		CB74B9241E94A3100033A4A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 406558B7B193D46673BAE642 /* Pods-LionShare Widget.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "LionShare Widget/LionShare Widget.entitlements";
 				DEVELOPMENT_TEAM = EXEZ76Y5F4;
 				INFOPLIST_FILE = "LionShare Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.14lox.LionShare.LionShare-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.14lox.LionShareCapital.LionShare-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -749,11 +861,13 @@
 		};
 		CB74B9251E94A3100033A4A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A7966578F610C7B4602BDB4 /* Pods-LionShare Widget.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "LionShare Widget/LionShare Widget.entitlements";
 				DEVELOPMENT_TEAM = EXEZ76Y5F4;
 				INFOPLIST_FILE = "LionShare Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.14lox.LionShare.LionShare-Widget";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.14lox.LionShareCapital.LionShare-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -762,6 +876,7 @@
 		};
 		CBA1BE461E9416A000FDBE3A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09C6EEFF07BBB45998C56BCC /* Pods-LionShareKit.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -787,6 +902,7 @@
 		};
 		CBA1BE471E9416A000FDBE3A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B54814C0CD9614B58A88DD5 /* Pods-LionShareKit.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
