@@ -34,7 +34,7 @@ class Currency: NSObject, NSCoding {
 		get {
 			var temp = [Currency]()
 			for currency in Currency.currencies {
-				if currency.display == true {
+				if currency.isHidden == false {
 					temp.append(currency)
 				}
 			}
@@ -63,7 +63,7 @@ class Currency: NSObject, NSCoding {
 	var colour: Int?
 	var price: Price?
 	var portfolioAmount: Double?
-	var display: Bool!
+	var isHidden: Bool!
 	
 	override init() {
 		super.init()
@@ -73,21 +73,21 @@ class Currency: NSObject, NSCoding {
 	                        symbol: String,
 	                        colour: Int,
 	                        portfolioAmount: Double? = 0.0,
-	                        display: Bool = true) {
+	                        isHidden: Bool = false) {
 		self.init()
 		
 		self.name = name
 		self.symbol = symbol
 		self.colour = colour
 		self.portfolioAmount = portfolioAmount
-		self.display = display
+		self.isHidden = isHidden
 	}
 	
 	let keyName = "name"
 	let keySymbol = "symbol"
 	let keyColour = "colour"
 	let keyPortfolioAmount = "portfolioAmount"
-	let keyDisplay = "display"
+	let keyIsHidden = "isHidden"
 	static let keyCurrencies = "currencies"
 	
 	required public init(coder aDecoder: NSCoder) {
@@ -95,7 +95,7 @@ class Currency: NSObject, NSCoding {
 		symbol = aDecoder.decodeObject(forKey: keySymbol) as! String?
 		colour = aDecoder.decodeObject(forKey: keyColour) as! Int?
 		portfolioAmount = aDecoder.decodeObject(forKey: keyPortfolioAmount) as! Double?
-		display = aDecoder.decodeObject(forKey: keyDisplay) as! Bool!
+		isHidden = aDecoder.decodeObject(forKey: keyIsHidden) as! Bool!
 		
 		super.init()
 	}
@@ -105,7 +105,7 @@ class Currency: NSObject, NSCoding {
 		aCoder.encode(symbol, forKey: keySymbol)
 		aCoder.encode(colour, forKey: keyColour)
 		aCoder.encode(portfolioAmount, forKey: keyPortfolioAmount)
-		aCoder.encode(display, forKey: keyDisplay)
+		aCoder.encode(isHidden, forKey: keyIsHidden)
 	}
 	
 	static func save() {
@@ -123,6 +123,7 @@ class Currency: NSObject, NSCoding {
 				if saved.symbol == currency.symbol,
 					let amount = saved.portfolioAmount {
 					currency.portfolioAmount = amount
+					currency.isHidden = saved.isHidden
 				}
 			}
 		}

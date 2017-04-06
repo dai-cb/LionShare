@@ -16,11 +16,7 @@ class EditPortfolioViewController: PortfolioViewController,
 		
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-		tabBarItem = UITabBarItem(title: "Portfolio", image: nil, selectedImage: nil)
-		
-		tableView.backgroundColor = UIColor.black
-		
+	
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
 	}

@@ -20,8 +20,6 @@ class PricesViewController: UIViewController,
 		
 		socket.delegate = self
 		
-		Currency.loadCurrencies()
-		
 		tabBarItem.imageInsets = UIEdgeInsets(top: 5.5, left: 0, bottom: -5.5, right: 0)
 		tabBarItem.title = nil
 		
@@ -32,6 +30,8 @@ class PricesViewController: UIViewController,
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
+		
+		Currency.loadCurrencies()
 		
 		displayCurrencies = Currency.displayCurrencies
 		

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3F3285C68911EB640C24C9B9 /* Pods_LionShare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5521521F64E4F06F5BD87969 /* Pods_LionShare.framework */; };
 		CB4166BC1E95C9250088EE62 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4166BB1E95C9250088EE62 /* TabBarController.swift */; };
+		CB4166C11E96153B0088EE62 /* AssetListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4166C01E96153B0088EE62 /* AssetListController.swift */; };
+		CB4166C31E9619B70088EE62 /* AssetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4166C21E9619B70088EE62 /* AssetCell.swift */; };
 		CB465F6B1E49780E00A0D7D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB465F6A1E49780E00A0D7D4 /* AppDelegate.swift */; };
 		CB465F6D1E49780E00A0D7D4 /* PricesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB465F6C1E49780E00A0D7D4 /* PricesViewController.swift */; };
 		CB465F701E49780E00A0D7D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB465F6E1E49780E00A0D7D4 /* Main.storyboard */; };
@@ -97,6 +99,8 @@
 		5521521F64E4F06F5BD87969 /* Pods_LionShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LionShare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74ADCEC09F25D83E098D1BA1 /* Pods-LionShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LionShare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LionShare/Pods-LionShare.debug.xcconfig"; sourceTree = "<group>"; };
 		CB4166BB1E95C9250088EE62 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		CB4166C01E96153B0088EE62 /* AssetListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetListController.swift; sourceTree = "<group>"; };
+		CB4166C21E9619B70088EE62 /* AssetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetCell.swift; sourceTree = "<group>"; };
 		CB465F671E49780E00A0D7D4 /* LionShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LionShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB465F6A1E49780E00A0D7D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB465F6C1E49780E00A0D7D4 /* PricesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +172,38 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CB4166BD1E9615070088EE62 /* Prices */ = {
+			isa = PBXGroup;
+			children = (
+				CB465F6C1E49780E00A0D7D4 /* PricesViewController.swift */,
+				CB465F8C1E49940700A0D7D4 /* PriceCell.swift */,
+				CBA1BE351E93688E00FDBE3A /* ChartView.swift */,
+			);
+			name = Prices;
+			sourceTree = "<group>";
+		};
+		CB4166BE1E96151A0088EE62 /* Portfolio */ = {
+			isa = PBXGroup;
+			children = (
+				CB465F841E49811100A0D7D4 /* PortfolioViewController.swift */,
+				CB94143F1E4AFC5400574B7E /* CurrencyCell.swift */,
+				CBA1BE491E9430B100FDBE3A /* PieChart.swift */,
+				CB9F3A221E4D6D2900484C23 /* EditPortfolioViewController.swift */,
+				CB9F3A241E4D6D3C00484C23 /* DisplayPortfolioViewController.swift */,
+			);
+			name = Portfolio;
+			sourceTree = "<group>";
+		};
+		CB4166BF1E9615240088EE62 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CB465F861E49812900A0D7D4 /* SettingsViewController.swift */,
+				CB4166C01E96153B0088EE62 /* AssetListController.swift */,
+				CB4166C21E9619B70088EE62 /* AssetCell.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		CB465F5E1E49780D00A0D7D4 = {
 			isa = PBXGroup;
 			children = (
@@ -207,16 +243,10 @@
 			isa = PBXGroup;
 			children = (
 				CB465F6E1E49780E00A0D7D4 /* Main.storyboard */,
-				CB465F6C1E49780E00A0D7D4 /* PricesViewController.swift */,
-				CB465F8C1E49940700A0D7D4 /* PriceCell.swift */,
-				CB94143F1E4AFC5400574B7E /* CurrencyCell.swift */,
-				CBA1BE351E93688E00FDBE3A /* ChartView.swift */,
-				CBA1BE491E9430B100FDBE3A /* PieChart.swift */,
-				CB465F841E49811100A0D7D4 /* PortfolioViewController.swift */,
-				CB9F3A221E4D6D2900484C23 /* EditPortfolioViewController.swift */,
-				CB9F3A241E4D6D3C00484C23 /* DisplayPortfolioViewController.swift */,
-				CB465F861E49812900A0D7D4 /* SettingsViewController.swift */,
 				CB4166BB1E95C9250088EE62 /* TabBarController.swift */,
+				CB4166BD1E9615070088EE62 /* Prices */,
+				CB4166BE1E96151A0088EE62 /* Portfolio */,
+				CB4166BF1E9615240088EE62 /* Settings */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -494,6 +524,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB4166C31E9619B70088EE62 /* AssetCell.swift in Sources */,
 				CBA1BE4A1E9430B100FDBE3A /* PieChart.swift in Sources */,
 				CB9414401E4AFC5400574B7E /* CurrencyCell.swift in Sources */,
 				CBA1BE361E93688E00FDBE3A /* ChartView.swift in Sources */,
@@ -505,6 +536,7 @@
 				CB465F851E49811100A0D7D4 /* PortfolioViewController.swift in Sources */,
 				CB9F3A231E4D6D2900484C23 /* EditPortfolioViewController.swift in Sources */,
 				CB465F811E49797B00A0D7D4 /* CurrencyFormatter.swift in Sources */,
+				CB4166C11E96153B0088EE62 /* AssetListController.swift in Sources */,
 				CB465F831E497B7800A0D7D4 /* Client.swift in Sources */,
 				CB465F8D1E49940700A0D7D4 /* PriceCell.swift in Sources */,
 				CB465F6B1E49780E00A0D7D4 /* AppDelegate.swift in Sources */,
