@@ -10,12 +10,12 @@ class Price: NSObject {
 	var prices: [Double]?
 	var latest: Double?
 
-	func difference() -> (String, Sign) {
+	func difference() -> (String, Double, Sign) {
 		
 		guard let prices = self.prices,
 			let first = prices.first,
 			let last = prices.last else {
-			return ("", .plus)
+			return ("", 0.0, .plus)
 		}
 		
 		if latest == nil || latest == 0.0 {
@@ -23,6 +23,8 @@ class Price: NSObject {
 		}
 		
 		let percent = ((1/(first / latest!)) - 1) * 100
+		
+		let diff = latest! - first
 		
 		var sign: Sign = .plus
 		
@@ -32,6 +34,6 @@ class Price: NSObject {
 		
 		let percentString = "\(CurrencyFormatter.sharedInstance.percentFormatter.string(from: NSNumber(value: percent))!)%"
 		
-		return (percentString, sign)
+		return (percentString, diff, sign)
 	}
 }

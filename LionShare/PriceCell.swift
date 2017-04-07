@@ -7,9 +7,6 @@ class PriceCell: UITableViewCell {
 	@IBOutlet weak var difference: UILabel!
 	@IBOutlet weak var dot: UIView!
 	@IBOutlet weak var chart: ChartView!
-	
-	override func prepareForReuse() {
-	
-	}
+
 }
 

@@ -4,15 +4,17 @@ open class Portfolio: NSObject {
 	
 	open static let shared = Portfolio()
 	
-	var totalUSDAmount: Double = 0.0
+	var totalNative = ""
+	var totalDifference = ""
 	
 	func update() {
 		
-		totalUSDAmount = 0.0
+		var totalAmount = 0.0
+		var totalDiff = 0.0
+		
+		print("update")
 		
 		for currency in Currency.displayCurrencies {
-			
-			print("*** currency = \(String(describing: currency.symbol))")
 			
 			guard let price = currency.price,
 				let last = price.prices?.last,
@@ -22,21 +24,25 @@ open class Portfolio: NSObject {
 				return
 			}
 			
-			
-			print("last = \(last)")
-			print("portfolioAmount = \(portfolioAmount)")
-			
 			var latest = last
 			if let priceLatest = price.latest,
 				priceLatest > 0.0 {
 				latest = priceLatest
 			}
 			
-			print("latest = \(latest)")
+			totalAmount += Double(portfolioAmount * latest)
 			
-			totalUSDAmount += Double(portfolioAmount * latest)
+			totalNative = CurrencyFormatter.sharedInstance.formatAmount(amount: totalAmount, currency: "USD")
 			
-			print("totalUSDAmount = \(totalUSDAmount)")
+			let (_, diff, _) = price.difference()
+			
+			print("yo = \(diff)")
+			
+			totalDiff += diff
+			
+			totalDifference = CurrencyFormatter.sharedInstance.formatAmount(amount: totalDiff, currency: "USD")
+			
+			print("totalDiff = \(totalDiff)")
 		}
 	}
 }

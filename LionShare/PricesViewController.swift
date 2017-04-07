@@ -174,7 +174,7 @@ class PricesViewController: UIViewController,
 		
 		cell.price.text = CurrencyFormatter.sharedInstance.formatAmount(amount: latest, currency: "USD", options: currencyFormatterOptions)
 		
-		let (difference, sign) = price.difference()
+		let (difference, _, sign) = price.difference()
 		
 		cell.difference.text = difference
 		

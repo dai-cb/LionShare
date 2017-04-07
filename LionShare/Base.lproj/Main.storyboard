@@ -54,7 +54,7 @@
                                 <rect key="frame" x="0.0" y="154" width="375" height="469"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" white="1" alpha="0.20000000000000001" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="currencyCell" rowHeight="55" id="mpr-j3-sQp" customClass="CurrencyCell" customModule="LionShare" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="55"/>
@@ -71,7 +71,7 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" placeholder="0" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z2W-I3-C8R">
                                                     <rect key="frame" x="187.5" y="0.0" width="123.5" height="55"/>
-                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="0.0" colorSpace="calibratedRGB"/>
                                                     <color key="tintColor" red="1" green="0.45098039220000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="SFMono-Regular" family="SF Mono" pointSize="14"/>
@@ -108,7 +108,7 @@
                                                 <constraint firstItem="PP9-W8-YlM" firstAttribute="trailing" secondItem="Z2W-I3-C8R" secondAttribute="leading" id="hfu-vY-DjA"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Sda-RQ-4gO" secondAttribute="bottom" id="JtA-rI-spa"/>
                                             <constraint firstItem="Z2W-I3-C8R" firstAttribute="leading" secondItem="mpr-j3-sQp" secondAttribute="centerX" id="bK8-GN-zaQ"/>
@@ -131,7 +131,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="0.45098039220000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="4gh-SV-bKv" firstAttribute="leading" secondItem="xTv-gQ-32G" secondAttribute="leading" id="5IW-XW-bmS"/>
@@ -200,44 +200,44 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WwA-H8-cW9">
-                                <rect key="frame" x="16" y="387" width="343" height="280"/>
+                                <rect key="frame" x="0.0" y="387" width="375" height="280"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="portfolioCell" rowHeight="75" id="kVh-5b-0fF" customClass="PortfolioCell" customModule="LionShare" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="75"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kVh-5b-0fF" id="Od8-01-3i7">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="74.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFD-h4-bwL" userLabel="Name Label">
-                                                    <rect key="frame" x="53" y="23" width="40" height="20"/>
+                                                    <rect key="frame" x="53" y="23" width="40" height="19"/>
                                                     <fontDescription key="fontDescription" name="SFMono-Medium" family="SF Mono" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$1,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06r-IN-xov" userLabel="Native Label">
-                                                    <rect key="frame" x="251.5" y="23" width="63.5" height="20"/>
+                                                    <rect key="frame" x="283.5" y="23" width="63.5" height="20"/>
                                                     <fontDescription key="fontDescription" name="SFMono-Medium" family="SF Mono" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUl-mw-3BK" userLabel="Crypto Label">
-                                                    <rect key="frame" x="53" y="43" width="26" height="17"/>
+                                                    <rect key="frame" x="53" y="42" width="26" height="17"/>
                                                     <fontDescription key="fontDescription" name="SFMono-Medium" family="SF Mono" pointSize="14"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOj-hJ-e1D" userLabel="Difference Label">
-                                                    <rect key="frame" x="280" y="43" width="35" height="17"/>
+                                                    <rect key="frame" x="312" y="43" width="35" height="17"/>
                                                     <fontDescription key="fontDescription" name="SFMono-Medium" family="SF Mono" pointSize="14"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tx1-Cp-Kct" userLabel="Dot">
-                                                    <rect key="frame" x="23" y="25.5" width="15" height="15"/>
+                                                    <rect key="frame" x="23" y="25" width="15" height="15"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="15" id="2Bn-7r-v64"/>
@@ -265,6 +265,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="crytpoTotal" destination="zUl-mw-3BK" id="OGh-dv-c5V"/>
                                             <outlet property="difference" destination="mOj-hJ-e1D" id="cNq-f6-Xkr"/>
@@ -282,12 +283,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="WwA-H8-cW9" secondAttribute="trailing" id="4ao-QY-Ol8"/>
+                            <constraint firstAttribute="trailing" secondItem="WwA-H8-cW9" secondAttribute="trailing" id="4ao-QY-Ol8"/>
                             <constraint firstItem="akj-rI-lPd" firstAttribute="trailing" secondItem="4IA-Z4-hB3" secondAttribute="trailing" id="5v7-eY-G6y"/>
                             <constraint firstItem="4IA-Z4-hB3" firstAttribute="top" secondItem="Gvg-s9-BN7" secondAttribute="bottom" constant="20" id="ARq-h1-0qG"/>
                             <constraint firstItem="ERh-ht-WUT" firstAttribute="top" secondItem="WwA-H8-cW9" secondAttribute="bottom" id="BdP-DS-dL0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4IA-Z4-hB3" secondAttribute="trailing" constant="20" id="Jqw-gP-nAJ"/>
-                            <constraint firstItem="WwA-H8-cW9" firstAttribute="leading" secondItem="dE8-6n-S6a" secondAttribute="leadingMargin" id="PeQ-mp-77c"/>
+                            <constraint firstItem="WwA-H8-cW9" firstAttribute="leading" secondItem="dE8-6n-S6a" secondAttribute="leading" id="PeQ-mp-77c"/>
                             <constraint firstItem="WwA-H8-cW9" firstAttribute="top" secondItem="4IA-Z4-hB3" secondAttribute="bottom" id="Q6s-h0-Mo7"/>
                             <constraint firstItem="akj-rI-lPd" firstAttribute="top" secondItem="ovh-4O-tWo" secondAttribute="bottom" id="WTc-pe-JCn"/>
                             <constraint firstItem="akj-rI-lPd" firstAttribute="leading" secondItem="4IA-Z4-hB3" secondAttribute="leading" id="YRF-jq-mTg"/>
@@ -397,7 +398,7 @@
                                         <rect key="frame" x="0.0" y="196" width="375" height="44"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Native Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gO-ni-9sC" userLabel="Native Currency">
-                                                <rect key="frame" x="16" y="12" width="148.5" height="20"/>
+                                                <rect key="frame" x="16" y="12.5" width="148.5" height="19"/>
                                                 <fontDescription key="fontDescription" name="SFMono-Medium" family="SF Mono" pointSize="16"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -421,7 +422,7 @@
                                         <rect key="frame" x="0.0" y="276" width="375" height="44"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3C1-UI-b2u" userLabel="Exchange">
-                                                <rect key="frame" x="16" y="12" width="79.5" height="20"/>
+                                                <rect key="frame" x="16" y="12.5" width="79.5" height="19"/>
                                                 <fontDescription key="fontDescription" name="SFMono-Medium" family="SF Mono" pointSize="16"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -542,7 +543,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m4N-W0-N97">
-                                                    <rect key="frame" x="48" y="12" width="240" height="19.5"/>
+                                                    <rect key="frame" x="48" y="12.5" width="240" height="19"/>
                                                     <fontDescription key="fontDescription" name="SFMono-Medium" family="SF Mono" pointSize="16"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>

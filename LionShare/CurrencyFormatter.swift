@@ -38,7 +38,7 @@ class CurrencyFormatter: NSObject {
 		
 		// Setup non standard formatters
 		truncatingFormatter.usesSignificantDigits = true
-		truncatingFormatter.maximumSignificantDigits = 4
+		truncatingFormatter.maximumSignificantDigits = 5
 		truncatingFormatter.minimumSignificantDigits = 0
 		truncatingFormatter.maximumFractionDigits = 8
 		truncatingFormatter.minimumFractionDigits = 2
@@ -85,6 +85,12 @@ class CurrencyFormatter: NSObject {
 		
 		formatter.minimumIntegerDigits = 1
 		formatter.maximumFractionDigits = 8
+		
+		// TODO: Fix currency hack
+		if currency == "USD" {
+			formatter.maximumFractionDigits = 2
+		}
+		
 		formatter.minimumFractionDigits = 2
 		
 		if formatOptions.allowTruncation == true {

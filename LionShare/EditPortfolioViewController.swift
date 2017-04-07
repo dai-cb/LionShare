@@ -10,7 +10,7 @@ class EditPortfolioViewController: PortfolioViewController,
 	@IBOutlet weak var totalAmountLabel: UILabel!
 	
 	var textFieldInUse: UITextField?
-	let numberToolbar = UIToolbar()
+//	let numberToolbar = UIToolbar()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -18,27 +18,26 @@ class EditPortfolioViewController: PortfolioViewController,
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
 		
-		tableView.backgroundColor = UIColor.black
+		tableView.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 26/255, alpha: 1)
 		
 		edgesForExtendedLayout = UIRectEdge()
 		
 		UIBarButtonItem.appearance().tintColor = UIColor(red: 254/255 , green: 115/255, blue: 0, alpha: 1)
 		
-		numberToolbar.barStyle = UIBarStyle.blackTranslucent
-		numberToolbar.items = [
-			UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil),
-			UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addAmount))
-		]
-		
-		numberToolbar.sizeToFit()
+//		numberToolbar.barStyle = UIBarStyle.blackTranslucent
+//		numberToolbar.items = [
+//			UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil),
+//			UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addAmount))
+//		]
+//		
+//		numberToolbar.sizeToFit()
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		
-		totalAmountLabel.text = "\(Portfolio.shared.totalUSDAmount)"
+		totalAmountLabel.text = Portfolio.shared.totalNative
 	}
-
 	
 	override func viewDidDisappear(_ animated: Bool) {
 		super.viewDidDisappear(animated)
@@ -84,8 +83,6 @@ class EditPortfolioViewController: PortfolioViewController,
 		cell.textField.delegate = self
 		cell.textField.tag = indexPath.row
 		
-		//cell.textField.inputAccessoryView = numberToolbar
-		
 		cell.dot.backgroundColor = UIColor(hex:colour)
 		cell.symbol.text = currency.symbol
 		
@@ -93,7 +90,7 @@ class EditPortfolioViewController: PortfolioViewController,
 	}
 	
 	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-		cell.backgroundColor = UIColor.black
+		cell.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 26/255, alpha: 1)
 	}
 	
 	func textFieldDidEndEditing(_ textField: UITextField) {
@@ -139,7 +136,7 @@ class EditPortfolioViewController: PortfolioViewController,
 		}
 		
 		Portfolio.shared.update()
-		totalAmountLabel.text = "\(Portfolio.shared.totalUSDAmount)"
+		totalAmountLabel.text = Portfolio.shared.totalNative
 		
 		self.performSegue(withIdentifier: "edit_to_show", sender: self)
 	}

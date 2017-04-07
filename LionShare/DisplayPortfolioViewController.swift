@@ -31,7 +31,8 @@ class DisplayPortfolioViewController: PortfolioViewController,
 		
 		tableView.reloadData()
 		
-		totalAmountLabel.text = "\(Portfolio.shared.totalUSDAmount)"
+		totalAmountLabel.text = Portfolio.shared.totalNative
+		totalDifferenceLabel.text = Portfolio.shared.totalDifference
 	}
 	
 	func buildPie(currencies: [Currency]) {
@@ -90,7 +91,14 @@ class DisplayPortfolioViewController: PortfolioViewController,
 			price = last
 		}
 		
-		cell.nativeTotal.text = "\(price * portfolio)"
+		let total = price * portfolio
+		
+		cell.nativeTotal.text =  CurrencyFormatter.sharedInstance.formatAmount(amount: total, currency: "USD")
+		
+		let (_, diff, sign) = currency.price!.difference()
+		
+		cell.difference.text = CurrencyFormatter.sharedInstance.formatAmount(amount: diff, currency: "USD")
+		cell.difference.textColor = sign == .plus ? Constants.greenPositiveColour : Constants.redNegativeColour
 		
 		return cell
 	}
