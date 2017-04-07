@@ -94,6 +94,8 @@ class PricesViewController: UIViewController,
 		UIView.animate(withDuration: 0.7) {
 			self.hideElements(cell, hide: false)
 		}
+		
+		Portfolio.shared.update()
 	}
 	
 	fileprivate func hideElements(_ cell: PriceCell, hide: Bool) {

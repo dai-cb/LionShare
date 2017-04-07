@@ -7,9 +7,11 @@ class EditPortfolioViewController: PortfolioViewController,
 								   UITextFieldDelegate {
 	
 	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet weak var totalAmountLabel: UILabel!
 	
 	var textFieldInUse: UITextField?
-	
+	let numberToolbar = UIToolbar()
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 	
@@ -19,7 +21,24 @@ class EditPortfolioViewController: PortfolioViewController,
 		tableView.backgroundColor = UIColor.black
 		
 		edgesForExtendedLayout = UIRectEdge()
+		
+		UIBarButtonItem.appearance().tintColor = UIColor(red: 254/255 , green: 115/255, blue: 0, alpha: 1)
+		
+		numberToolbar.barStyle = UIBarStyle.blackTranslucent
+		numberToolbar.items = [
+			UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: self, action: nil),
+			UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addAmount))
+		]
+		
+		numberToolbar.sizeToFit()
 	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		totalAmountLabel.text = "\(Portfolio.shared.totalUSDAmount)"
+	}
+
 	
 	override func viewDidDisappear(_ animated: Bool) {
 		super.viewDidDisappear(animated)
@@ -64,6 +83,9 @@ class EditPortfolioViewController: PortfolioViewController,
 		cell.name.text = name
 		cell.textField.delegate = self
 		cell.textField.tag = indexPath.row
+		
+		//cell.textField.inputAccessoryView = numberToolbar
+		
 		cell.dot.backgroundColor = UIColor(hex:colour)
 		cell.symbol.text = currency.symbol
 		
@@ -104,12 +126,21 @@ class EditPortfolioViewController: PortfolioViewController,
 		Currency.save()
 	}
 	
+	func addAmount() {
+		if let textField = textFieldInUse {
+			saveAmountFrom(textField: textField)
+			textField.resignFirstResponder()
+		}
+	}
+	
 	@IBAction func savePressed(_ sender: Any) {
 		if let textField = textFieldInUse {
 			saveAmountFrom(textField: textField)
 		}
 		
+		Portfolio.shared.update()
+		totalAmountLabel.text = "\(Portfolio.shared.totalUSDAmount)"
+		
 		self.performSegue(withIdentifier: "edit_to_show", sender: self)
 	}
-
 }

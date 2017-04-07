@@ -27,7 +27,6 @@ import UIKit
 				for slice in slices {
 					total = slice.value + total
 				}
-				//setNeedsDisplay()
 			}
 		}
 	
@@ -48,7 +47,7 @@ import UIKit
 			super.draw(rect)
 			
 			radius.inner = bounds.width * 0.5 - 40
-			radius.outer = bounds.width * 0.5 - 30
+			radius.outer = bounds.width * 0.5 - 15
 			
 			let center = CGPoint(x: bounds.width * 0.5, y: bounds.height * 0.5)
 			var startValue: CGFloat = 0
@@ -89,6 +88,6 @@ import UIKit
 			}
 			UIView.animate(withDuration: 0.3) {
 				self.setNeedsDisplay()
-			}
+		}
 	}
 }

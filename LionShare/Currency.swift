@@ -48,14 +48,7 @@ class Currency: NSObject, NSCoding {
 				}
 				return false
 			}
-			
-			for currency in temp {
-				
-				guard let amount = currency.portfolioAmount,
-					let colour = currency.colour else { continue }
-			}
 			return temp
-				
 		}
 	}
 
@@ -129,7 +122,7 @@ class Currency: NSObject, NSCoding {
 				print("Problem loading currencies")
 				return
 		}
-			
+		
 		for saved in savedCurrencies {
 			for currency in currencies {
 				if saved.symbol == currency.symbol,
@@ -139,5 +132,7 @@ class Currency: NSObject, NSCoding {
 				}
 			}
 		}
+		
+		Portfolio.shared.update()
 	}
 }

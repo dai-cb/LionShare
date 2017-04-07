@@ -12,6 +12,10 @@
 		CB4166BC1E95C9250088EE62 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4166BB1E95C9250088EE62 /* TabBarController.swift */; };
 		CB4166C11E96153B0088EE62 /* AssetListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4166C01E96153B0088EE62 /* AssetListController.swift */; };
 		CB4166C31E9619B70088EE62 /* AssetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4166C21E9619B70088EE62 /* AssetCell.swift */; };
+		CB4166C81E971B340088EE62 /* PortfolioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4166C71E971B340088EE62 /* PortfolioCell.swift */; };
+		CB4166CC1E9736400088EE62 /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4166CB1E97363F0088EE62 /* Portfolio.swift */; };
+		CB4166CD1E9736400088EE62 /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4166CB1E97363F0088EE62 /* Portfolio.swift */; };
+		CB4166CE1E9736400088EE62 /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB4166CB1E97363F0088EE62 /* Portfolio.swift */; };
 		CB465F6B1E49780E00A0D7D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB465F6A1E49780E00A0D7D4 /* AppDelegate.swift */; };
 		CB465F6D1E49780E00A0D7D4 /* PricesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB465F6C1E49780E00A0D7D4 /* PricesViewController.swift */; };
 		CB465F701E49780E00A0D7D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB465F6E1E49780E00A0D7D4 /* Main.storyboard */; };
@@ -111,6 +115,8 @@
 		CB4166C21E9619B70088EE62 /* AssetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetCell.swift; sourceTree = "<group>"; };
 		CB4166C41E962C5F0088EE62 /* LionShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LionShare.entitlements; sourceTree = "<group>"; };
 		CB4166C51E962C7C0088EE62 /* LionShare Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "LionShare Widget.entitlements"; sourceTree = "<group>"; };
+		CB4166C71E971B340088EE62 /* PortfolioCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortfolioCell.swift; sourceTree = "<group>"; };
+		CB4166CB1E97363F0088EE62 /* Portfolio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
 		CB465F671E49780E00A0D7D4 /* LionShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LionShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB465F6A1E49780E00A0D7D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB465F6C1E49780E00A0D7D4 /* PricesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricesViewController.swift; sourceTree = "<group>"; };
@@ -202,10 +208,11 @@
 			isa = PBXGroup;
 			children = (
 				CB465F841E49811100A0D7D4 /* PortfolioViewController.swift */,
-				CB94143F1E4AFC5400574B7E /* CurrencyCell.swift */,
-				CBA1BE491E9430B100FDBE3A /* PieChart.swift */,
 				CB9F3A221E4D6D2900484C23 /* EditPortfolioViewController.swift */,
 				CB9F3A241E4D6D3C00484C23 /* DisplayPortfolioViewController.swift */,
+				CB94143F1E4AFC5400574B7E /* CurrencyCell.swift */,
+				CB4166C71E971B340088EE62 /* PortfolioCell.swift */,
+				CBA1BE491E9430B100FDBE3A /* PieChart.swift */,
 			);
 			name = Portfolio;
 			sourceTree = "<group>";
@@ -273,6 +280,7 @@
 			children = (
 				CB465F881E49842000A0D7D4 /* Price.swift */,
 				CB94143D1E4AE85900574B7E /* Currency.swift */,
+				CB4166CB1E97363F0088EE62 /* Portfolio.swift */,
 			);
 			name = Models;
 			path = ../LionShare;
@@ -636,6 +644,7 @@
 				CBA1BE4A1E9430B100FDBE3A /* PieChart.swift in Sources */,
 				CB9414401E4AFC5400574B7E /* CurrencyCell.swift in Sources */,
 				CBA1BE361E93688E00FDBE3A /* ChartView.swift in Sources */,
+				CB4166CC1E9736400088EE62 /* Portfolio.swift in Sources */,
 				CB94143E1E4AE85900574B7E /* Currency.swift in Sources */,
 				CB465F6D1E49780E00A0D7D4 /* PricesViewController.swift in Sources */,
 				CB4166BC1E95C9250088EE62 /* TabBarController.swift in Sources */,
@@ -645,6 +654,7 @@
 				CB9F3A231E4D6D2900484C23 /* EditPortfolioViewController.swift in Sources */,
 				CB465F811E49797B00A0D7D4 /* CurrencyFormatter.swift in Sources */,
 				CB4166C11E96153B0088EE62 /* AssetListController.swift in Sources */,
+				CB4166C81E971B340088EE62 /* PortfolioCell.swift in Sources */,
 				CB465F831E497B7800A0D7D4 /* Client.swift in Sources */,
 				CB465F8D1E49940700A0D7D4 /* PriceCell.swift in Sources */,
 				CB465F6B1E49780E00A0D7D4 /* AppDelegate.swift in Sources */,
@@ -660,6 +670,7 @@
 				CB74B9331E94BBBC0033A4A4 /* Currency.swift in Sources */,
 				CB74B92B1E94BB960033A4A4 /* Client.swift in Sources */,
 				CB74B92F1E94BB9D0033A4A4 /* CurrencyFormatter.swift in Sources */,
+				CB4166CE1E9736400088EE62 /* Portfolio.swift in Sources */,
 				CB74B91B1E94A3100033A4A4 /* TodayViewController.swift in Sources */,
 				CB74B9311E94BBBA0033A4A4 /* Price.swift in Sources */,
 				CB74B92D1E94BB9A0033A4A4 /* Constants.swift in Sources */,
@@ -670,6 +681,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB4166CD1E9736400088EE62 /* Portfolio.swift in Sources */,
 				CB74B92A1E94BB960033A4A4 /* Client.swift in Sources */,
 				CB74B9321E94BBBC0033A4A4 /* Currency.swift in Sources */,
 				CB74B9301E94BBB90033A4A4 /* Price.swift in Sources */,

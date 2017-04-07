@@ -16,6 +16,11 @@ class AssetListController: UIViewController,
 		Currency.loadCurrencies()
 
 		edgesForExtendedLayout = UIRectEdge()
+		
+		UIBarButtonItem.appearance().tintColor = UIColor(red: 254/255 , green: 115/255, blue: 0, alpha: 1)
+		
+		navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+		navigationItem.backBarButtonItem?.accessibilityLabel = "Back"
 	}
 	
 	override func viewDidAppear(_ animated: Bool) {
@@ -34,6 +39,23 @@ class AssetListController: UIViewController,
 
 	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 		return 44
+	}
+	
+	func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+		if section == 0 {
+			return 44
+		}
+		return 0
+	}
+	
+	func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+		if section != 0 {
+			return nil
+		}
+		
+		let blankView = UIView()
+		blankView.backgroundColor = UIColor.black
+		return blankView
 	}
 	
 	func numberOfSections(in tableView: UITableView) -> Int {
