@@ -1,0 +1,900 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		035B12BC858C8FCE4A8FBFCBA96CD5A3 /* Pods-LionShare Widget-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C2EB6845A036EE716DB3CA076B3ECCD /* Pods-LionShare Widget-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F1E6468B801D5353A7B02FDB9AC55F9 /* Pods-LionShare Widget-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F16FF542771D1515257AD3BCCA176FF5 /* Pods-LionShare Widget-dummy.m */; };
+		558F948EDDA9A8F48542A3F6DD3FB20B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		77D7CE6D4DBB9AB25B33B42D7D14CA42 /* SSLSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102B55168A8E4EFBBE5D89B168C4BDB7 /* SSLSecurity.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		81B6AB91EF98C760892A0CA7A6C911E0 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787AAB748286B68842F6103B2383D9A8 /* WebSocket.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		920A5B6FD7ADFE1B104C56D8187A10BD /* Pods-LionShare-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8745A0ADB96FB9260F38B002D63F6E6A /* Pods-LionShare-dummy.m */; };
+		B3B0440CBA62F71AB0BB943C80620045 /* Pods-LionShare-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 35DC85310C2E14C089CE52969D3A0009 /* Pods-LionShare-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAB2077053CF2BD8E0BF2B5C9B24F3D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		D23E93941D724D69C0F56B53BCA4DF89 /* Starscream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCBA7367EF265A7000E40A3139B9CC8 /* Starscream-dummy.m */; };
+		DA130175BB930A67F39CECB92A6F8EDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		F0C8B64E460671F5342B96595901EA37 /* Pods-LionShareKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 25837ED52CE94CD6C5EADDEE00D86B71 /* Pods-LionShareKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F837CAF7516DC1512FDDDFCD5F786E50 /* Pods-LionShareKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F3052B81FCC9B6B8698CCFAC46DB1AD /* Pods-LionShareKit-dummy.m */; };
+		FADAA888E2B721371A1CC4C79BC943F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		FBDB05FC83A77C6860E0E82DA6A58368 /* Starscream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FA32A5E4A9572939B8A96925616167B /* Starscream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A7832713A58E93E4D3E7C767E48FA02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A80B4AFA242050B31632E9778B34057;
+			remoteInfo = Starscream;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01BCC869B1DE0C2A4791F13CD204F2AD /* Starscream.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Starscream.xcconfig; sourceTree = "<group>"; };
+		0906BC1EA63E7CB83F6A47C6D030B8F0 /* Pods_LionShareKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LionShareKit.framework; path = "Pods-LionShareKit.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		102B55168A8E4EFBBE5D89B168C4BDB7 /* SSLSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLSecurity.swift; path = Source/SSLSecurity.swift; sourceTree = "<group>"; };
+		1222E2AEA823796DC5836AC56E2D3C63 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
+		226875FE3A206B4DCEFCEC53779636D9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25837ED52CE94CD6C5EADDEE00D86B71 /* Pods-LionShareKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LionShareKit-umbrella.h"; sourceTree = "<group>"; };
+		267BBF05A62DF730F61C73C7A6793667 /* Pods-LionShareKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LionShareKit.release.xcconfig"; sourceTree = "<group>"; };
+		27FBFDFA5D2AA6B4697ECB90873484C7 /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Starscream.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F3052B81FCC9B6B8698CCFAC46DB1AD /* Pods-LionShareKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LionShareKit-dummy.m"; sourceTree = "<group>"; };
+		35DC85310C2E14C089CE52969D3A0009 /* Pods-LionShare-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LionShare-umbrella.h"; sourceTree = "<group>"; };
+		36319AE5AE02C059DBA050D00D78F475 /* Pods-LionShareKit-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LionShareKit-resources.sh"; sourceTree = "<group>"; };
+		371D78422A0F817DDAEC9FA0ECFB4CF9 /* Pods-LionShare-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LionShare-acknowledgements.plist"; sourceTree = "<group>"; };
+		3B6DF7331754AADE3B7CB45B76D44391 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CD10F087402B9B1009165A3FBB4DAA4 /* Pods-LionShare-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LionShare-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3EACE4E58B37C44B26198CF62AC5EE85 /* Pods-LionShare-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LionShare-frameworks.sh"; sourceTree = "<group>"; };
+		45CC56ACD3F79DF0FA667758995A1FA7 /* Pods-LionShare Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LionShare Widget.release.xcconfig"; sourceTree = "<group>"; };
+		4BC8AAEAAC2961B80354A9613A426BB8 /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
+		5343F58585B1FE76520845268D834691 /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
+		5397234C50054969657DC46724FF17DD /* Pods-LionShareKit-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LionShareKit-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5A2F69C1C873E43B237600AAAB22D795 /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
+		5CCBA7367EF265A7000E40A3139B9CC8 /* Starscream-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Starscream-dummy.m"; sourceTree = "<group>"; };
+		606AD4C035211ACEA9ED197E13C026B2 /* Pods-LionShare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LionShare.debug.xcconfig"; sourceTree = "<group>"; };
+		6BBFC498717743E8DC0C4E884DF74339 /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
+		787AAB748286B68842F6103B2383D9A8 /* WebSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = Source/WebSocket.swift; sourceTree = "<group>"; };
+		79E045A3147F3C287C88F21203DABF87 /* Starscream-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-prefix.pch"; sourceTree = "<group>"; };
+		7AFD9F566693FF9A2D88DF7C41AAB7CE /* Pods-LionShare Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LionShare Widget.debug.xcconfig"; sourceTree = "<group>"; };
+		7C2EB6845A036EE716DB3CA076B3ECCD /* Pods-LionShare Widget-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LionShare Widget-umbrella.h"; sourceTree = "<group>"; };
+		8513E734C57821C8697022516ADD030A /* Pods-LionShareKit-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LionShareKit-acknowledgements.plist"; sourceTree = "<group>"; };
+		8745A0ADB96FB9260F38B002D63F6E6A /* Pods-LionShare-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LionShare-dummy.m"; sourceTree = "<group>"; };
+		8806EAB150A695A0E2196BDB47E37707 /* Pods-LionShare Widget.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-LionShare Widget.modulemap"; sourceTree = "<group>"; };
+		8FA32A5E4A9572939B8A96925616167B /* Starscream-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-umbrella.h"; sourceTree = "<group>"; };
+		9296831F1FD1D9D53B3463B390D45C21 /* Starscream.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Starscream.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		98C506CFDC5EA2B609FEE4A83ED7D4D7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B41881311D94A2256B30434E4D64F29 /* Pods-LionShare Widget-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LionShare Widget-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9FEBAFD221F91C184D80974D2D1FE11B /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
+		ADE6171B471CD48D6A91BA2ECDF7B5BA /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
+		B3A253F49FA9C44BE45E4A7D95B06C64 /* Pods-LionShare Widget-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LionShare Widget-resources.sh"; sourceTree = "<group>"; };
+		BED02978DCE778A272C57E060746CE37 /* Pods-LionShareKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-LionShareKit.modulemap"; sourceTree = "<group>"; };
+		C3ED076CBA4894F8D1B68F58FF398AAA /* Pods-LionShare.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-LionShare.modulemap"; sourceTree = "<group>"; };
+		C9A398239F67C4E21DC9BA7FD5474CF4 /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CDBBC129D9867F0B126A580C582AD884 /* Pods-LionShare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LionShare.release.xcconfig"; sourceTree = "<group>"; };
+		CEE78A5C86DC0FDB6CC4CFA824F396DC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D15796209FFC7A7C0A76175311157791 /* Pods-LionShare-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LionShare-resources.sh"; sourceTree = "<group>"; };
+		E2EA7C2FDED3B9749C07ADA4F7FC9672 /* Pods-LionShare Widget-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LionShare Widget-acknowledgements.plist"; sourceTree = "<group>"; };
+		E5A59D07C3612F4CF178EEE022640A70 /* Pods-LionShareKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LionShareKit.debug.xcconfig"; sourceTree = "<group>"; };
+		E665DAEFD338F58AEDBC613B569F0BE1 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		E856203ABDE24E66852D9487EC8EF856 /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = iOS/Crashlytics.framework/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
+		EEFF925F23C2B91450264B112528AC71 /* Pods_LionShare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LionShare.framework; path = "Pods-LionShare.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF1AD145D823B7BE31EC0E8F40CCAE92 /* Pods_LionShare_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LionShare_Widget.framework; path = "Pods-LionShare Widget.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F16FF542771D1515257AD3BCCA176FF5 /* Pods-LionShare Widget-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LionShare Widget-dummy.m"; sourceTree = "<group>"; };
+		F4B6E97AC72E1D64858727FEEBEF9B58 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7087DA7BEFF397CB8824D275FE2017AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAB2077053CF2BD8E0BF2B5C9B24F3D2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		812A133D579819F7F5A6B0A8A9189B5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA130175BB930A67F39CECB92A6F8EDE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B046F24B2A5D1D7C1B317618E8D2FE84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FADAA888E2B721371A1CC4C79BC943F0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEF441560F1FD6477C1FFD4CAC1EDC6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				558F948EDDA9A8F48542A3F6DD3FB20B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A62C37A8604F033A982D5EB615200E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				911920DF312B20387D15F3A3BA505412 /* Crashlytics */,
+				727B4A8AC0B3D3FFA1F6176EA87451BA /* Fabric */,
+				863EC4E24833A54BD2EEDD4C79E6FA6A /* Starscream */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		0A881CD35EA6F1DF9FF4CFDFF1681A28 /* Pods-LionShare Widget */ = {
+			isa = PBXGroup;
+			children = (
+				98C506CFDC5EA2B609FEE4A83ED7D4D7 /* Info.plist */,
+				8806EAB150A695A0E2196BDB47E37707 /* Pods-LionShare Widget.modulemap */,
+				9B41881311D94A2256B30434E4D64F29 /* Pods-LionShare Widget-acknowledgements.markdown */,
+				E2EA7C2FDED3B9749C07ADA4F7FC9672 /* Pods-LionShare Widget-acknowledgements.plist */,
+				F16FF542771D1515257AD3BCCA176FF5 /* Pods-LionShare Widget-dummy.m */,
+				B3A253F49FA9C44BE45E4A7D95B06C64 /* Pods-LionShare Widget-resources.sh */,
+				7C2EB6845A036EE716DB3CA076B3ECCD /* Pods-LionShare Widget-umbrella.h */,
+				7AFD9F566693FF9A2D88DF7C41AAB7CE /* Pods-LionShare Widget.debug.xcconfig */,
+				45CC56ACD3F79DF0FA667758995A1FA7 /* Pods-LionShare Widget.release.xcconfig */,
+			);
+			name = "Pods-LionShare Widget";
+			path = "Target Support Files/Pods-LionShare Widget";
+			sourceTree = "<group>";
+		};
+		19BB94092108BFBDA1937CF1D2FBB651 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1222E2AEA823796DC5836AC56E2D3C63 /* Crashlytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		727B4A8AC0B3D3FFA1F6176EA87451BA /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				F4B6E97AC72E1D64858727FEEBEF9B58 /* FABAttributes.h */,
+				6BBFC498717743E8DC0C4E884DF74339 /* Fabric.h */,
+				87399DF214ACE6B85026553652DA87E6 /* Frameworks */,
+			);
+			name = Fabric;
+			path = Fabric;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		768E754B82767F403FA46F0FCAF8575C /* Pods-LionShare */ = {
+			isa = PBXGroup;
+			children = (
+				3B6DF7331754AADE3B7CB45B76D44391 /* Info.plist */,
+				C3ED076CBA4894F8D1B68F58FF398AAA /* Pods-LionShare.modulemap */,
+				3CD10F087402B9B1009165A3FBB4DAA4 /* Pods-LionShare-acknowledgements.markdown */,
+				371D78422A0F817DDAEC9FA0ECFB4CF9 /* Pods-LionShare-acknowledgements.plist */,
+				8745A0ADB96FB9260F38B002D63F6E6A /* Pods-LionShare-dummy.m */,
+				3EACE4E58B37C44B26198CF62AC5EE85 /* Pods-LionShare-frameworks.sh */,
+				D15796209FFC7A7C0A76175311157791 /* Pods-LionShare-resources.sh */,
+				35DC85310C2E14C089CE52969D3A0009 /* Pods-LionShare-umbrella.h */,
+				606AD4C035211ACEA9ED197E13C026B2 /* Pods-LionShare.debug.xcconfig */,
+				CDBBC129D9867F0B126A580C582AD884 /* Pods-LionShare.release.xcconfig */,
+			);
+			name = "Pods-LionShare";
+			path = "Target Support Files/Pods-LionShare";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				0A62C37A8604F033A982D5EB615200E4 /* Pods */,
+				818EA81FCF9AC2E2363C5C6FE4B7985B /* Products */,
+				8BEFC32940F81B2C370ED458F60BD3C0 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7E54E0D6C7DFFD4CE729746486076F66 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				226875FE3A206B4DCEFCEC53779636D9 /* Info.plist */,
+				9296831F1FD1D9D53B3463B390D45C21 /* Starscream.modulemap */,
+				01BCC869B1DE0C2A4791F13CD204F2AD /* Starscream.xcconfig */,
+				5CCBA7367EF265A7000E40A3139B9CC8 /* Starscream-dummy.m */,
+				79E045A3147F3C287C88F21203DABF87 /* Starscream-prefix.pch */,
+				8FA32A5E4A9572939B8A96925616167B /* Starscream-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Starscream";
+			sourceTree = "<group>";
+		};
+		818EA81FCF9AC2E2363C5C6FE4B7985B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEFF925F23C2B91450264B112528AC71 /* Pods_LionShare.framework */,
+				EF1AD145D823B7BE31EC0E8F40CCAE92 /* Pods_LionShare_Widget.framework */,
+				0906BC1EA63E7CB83F6A47C6D030B8F0 /* Pods_LionShareKit.framework */,
+				27FBFDFA5D2AA6B4697ECB90873484C7 /* Starscream.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		863EC4E24833A54BD2EEDD4C79E6FA6A /* Starscream */ = {
+			isa = PBXGroup;
+			children = (
+				102B55168A8E4EFBBE5D89B168C4BDB7 /* SSLSecurity.swift */,
+				787AAB748286B68842F6103B2383D9A8 /* WebSocket.swift */,
+				7E54E0D6C7DFFD4CE729746486076F66 /* Support Files */,
+			);
+			name = Starscream;
+			path = Starscream;
+			sourceTree = "<group>";
+		};
+		87399DF214ACE6B85026553652DA87E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E665DAEFD338F58AEDBC613B569F0BE1 /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8BEFC32940F81B2C370ED458F60BD3C0 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				768E754B82767F403FA46F0FCAF8575C /* Pods-LionShare */,
+				0A881CD35EA6F1DF9FF4CFDFF1681A28 /* Pods-LionShare Widget */,
+				E8E7AD6AD71CC12E7BA662A7EED91FA9 /* Pods-LionShareKit */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		911920DF312B20387D15F3A3BA505412 /* Crashlytics */ = {
+			isa = PBXGroup;
+			children = (
+				ADE6171B471CD48D6A91BA2ECDF7B5BA /* ANSCompatibility.h */,
+				4BC8AAEAAC2961B80354A9613A426BB8 /* Answers.h */,
+				5343F58585B1FE76520845268D834691 /* CLSAttributes.h */,
+				5A2F69C1C873E43B237600AAAB22D795 /* CLSLogging.h */,
+				9FEBAFD221F91C184D80974D2D1FE11B /* CLSReport.h */,
+				E856203ABDE24E66852D9487EC8EF856 /* CLSStackFrame.h */,
+				C9A398239F67C4E21DC9BA7FD5474CF4 /* Crashlytics.h */,
+				19BB94092108BFBDA1937CF1D2FBB651 /* Frameworks */,
+			);
+			name = Crashlytics;
+			path = Crashlytics;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8E7AD6AD71CC12E7BA662A7EED91FA9 /* Pods-LionShareKit */ = {
+			isa = PBXGroup;
+			children = (
+				CEE78A5C86DC0FDB6CC4CFA824F396DC /* Info.plist */,
+				BED02978DCE778A272C57E060746CE37 /* Pods-LionShareKit.modulemap */,
+				5397234C50054969657DC46724FF17DD /* Pods-LionShareKit-acknowledgements.markdown */,
+				8513E734C57821C8697022516ADD030A /* Pods-LionShareKit-acknowledgements.plist */,
+				2F3052B81FCC9B6B8698CCFAC46DB1AD /* Pods-LionShareKit-dummy.m */,
+				36319AE5AE02C059DBA050D00D78F475 /* Pods-LionShareKit-resources.sh */,
+				25837ED52CE94CD6C5EADDEE00D86B71 /* Pods-LionShareKit-umbrella.h */,
+				E5A59D07C3612F4CF178EEE022640A70 /* Pods-LionShareKit.debug.xcconfig */,
+				267BBF05A62DF730F61C73C7A6793667 /* Pods-LionShareKit.release.xcconfig */,
+			);
+			name = "Pods-LionShareKit";
+			path = "Target Support Files/Pods-LionShareKit";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		15191693B11B18D18E79F284F97D1826 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				035B12BC858C8FCE4A8FBFCBA96CD5A3 /* Pods-LionShare Widget-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B48B68C97A6B4A692F2A78CE6B1854C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBDB05FC83A77C6860E0E82DA6A58368 /* Starscream-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6A002CE90576FDBA6AD1A6593884FD2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3B0440CBA62F71AB0BB943C80620045 /* Pods-LionShare-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7DD19647371F7B25430128ACE9D5CDE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0C8B64E460671F5342B96595901EA37 /* Pods-LionShareKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2A80B4AFA242050B31632E9778B34057 /* Starscream */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0000991459E92B6ED3D57BEB7D891F11 /* Build configuration list for PBXNativeTarget "Starscream" */;
+			buildPhases = (
+				7B263FDA86F580ABEED4F972033FDD71 /* Sources */,
+				BEF441560F1FD6477C1FFD4CAC1EDC6D /* Frameworks */,
+				5B48B68C97A6B4A692F2A78CE6B1854C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Starscream;
+			productName = Starscream;
+			productReference = 27FBFDFA5D2AA6B4697ECB90873484C7 /* Starscream.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6D3E45CD3469CD28491F9BCE3A2B7D2D /* Pods-LionShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F760CFA9526D175DFBB995FA1B9FC512 /* Build configuration list for PBXNativeTarget "Pods-LionShare" */;
+			buildPhases = (
+				101A06FEABB35D99AE401A2AAB6F93A7 /* Sources */,
+				812A133D579819F7F5A6B0A8A9189B5B /* Frameworks */,
+				C6A002CE90576FDBA6AD1A6593884FD2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				97B555734F0583430155C8F99D225EC7 /* PBXTargetDependency */,
+			);
+			name = "Pods-LionShare";
+			productName = "Pods-LionShare";
+			productReference = EEFF925F23C2B91450264B112528AC71 /* Pods_LionShare.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9D3EA23327AE90D8D1DF0FECC294876E /* Pods-LionShareKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24F7E2A6233D9190AA1A5889A9E56637 /* Build configuration list for PBXNativeTarget "Pods-LionShareKit" */;
+			buildPhases = (
+				DBBC680DE68E7B9DF09148DB1FF968B4 /* Sources */,
+				7087DA7BEFF397CB8824D275FE2017AE /* Frameworks */,
+				C7DD19647371F7B25430128ACE9D5CDE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-LionShareKit";
+			productName = "Pods-LionShareKit";
+			productReference = 0906BC1EA63E7CB83F6A47C6D030B8F0 /* Pods_LionShareKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E50EA82D10DA756BFD2581CA6D368174 /* Pods-LionShare Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AC9391E5E08E96C0C0F36FC6965312A /* Build configuration list for PBXNativeTarget "Pods-LionShare Widget" */;
+			buildPhases = (
+				C4095D11F7D1F8CB333F6C392DC923DA /* Sources */,
+				B046F24B2A5D1D7C1B317618E8D2FE84 /* Frameworks */,
+				15191693B11B18D18E79F284F97D1826 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-LionShare Widget";
+			productName = "Pods-LionShare Widget";
+			productReference = EF1AD145D823B7BE31EC0E8F40CCAE92 /* Pods_LionShare_Widget.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 818EA81FCF9AC2E2363C5C6FE4B7985B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6D3E45CD3469CD28491F9BCE3A2B7D2D /* Pods-LionShare */,
+				E50EA82D10DA756BFD2581CA6D368174 /* Pods-LionShare Widget */,
+				9D3EA23327AE90D8D1DF0FECC294876E /* Pods-LionShareKit */,
+				2A80B4AFA242050B31632E9778B34057 /* Starscream */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		101A06FEABB35D99AE401A2AAB6F93A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				920A5B6FD7ADFE1B104C56D8187A10BD /* Pods-LionShare-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B263FDA86F580ABEED4F972033FDD71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77D7CE6D4DBB9AB25B33B42D7D14CA42 /* SSLSecurity.swift in Sources */,
+				D23E93941D724D69C0F56B53BCA4DF89 /* Starscream-dummy.m in Sources */,
+				81B6AB91EF98C760892A0CA7A6C911E0 /* WebSocket.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4095D11F7D1F8CB333F6C392DC923DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1E6468B801D5353A7B02FDB9AC55F9 /* Pods-LionShare Widget-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBBC680DE68E7B9DF09148DB1FF968B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F837CAF7516DC1512FDDDFCD5F786E50 /* Pods-LionShareKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		97B555734F0583430155C8F99D225EC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Starscream;
+			target = 2A80B4AFA242050B31632E9778B34057 /* Starscream */;
+			targetProxy = 5A7832713A58E93E4D3E7C767E48FA02 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2A8F1A03A95FEA1800EA52342EA774C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5A59D07C3612F4CF178EEE022640A70 /* Pods-LionShareKit.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LionShareKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LionShareKit/Pods-LionShareKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LionShareKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		33EB3D8E147023C7D4DDFAC91B82B385 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 267BBF05A62DF730F61C73C7A6793667 /* Pods-LionShareKit.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LionShareKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LionShareKit/Pods-LionShareKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LionShareKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		55FD1A5979C555CB62C4E5D005557485 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45CC56ACD3F79DF0FA667758995A1FA7 /* Pods-LionShare Widget.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LionShare Widget/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LionShare Widget/Pods-LionShare Widget.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LionShare_Widget;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6639A8BED9A0B4FD4F30EEB2C712E317 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 606AD4C035211ACEA9ED197E13C026B2 /* Pods-LionShare.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LionShare/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LionShare/Pods-LionShare.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LionShare;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		673254EEAF0B5BF4596080C749645884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78FEFA69FA34374E7F193CD8C027A04F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01BCC869B1DE0C2A4791F13CD204F2AD /* Starscream.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Starscream/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Starscream;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7CFD7C5AA7135A5988F9C92EEF0B83F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDBBC129D9867F0B126A580C582AD884 /* Pods-LionShare.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LionShare/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LionShare/Pods-LionShare.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LionShare;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B055487D4D22FA12FEADE121ADE42E40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01BCC869B1DE0C2A4791F13CD204F2AD /* Starscream.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Starscream/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Starscream;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		EFBF8816007AF071E1AA4ED196D572F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AFD9F566693FF9A2D88DF7C41AAB7CE /* Pods-LionShare Widget.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LionShare Widget/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LionShare Widget/Pods-LionShare Widget.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LionShare_Widget;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0000991459E92B6ED3D57BEB7D891F11 /* Build configuration list for PBXNativeTarget "Starscream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78FEFA69FA34374E7F193CD8C027A04F /* Debug */,
+				B055487D4D22FA12FEADE121ADE42E40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24F7E2A6233D9190AA1A5889A9E56637 /* Build configuration list for PBXNativeTarget "Pods-LionShareKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A8F1A03A95FEA1800EA52342EA774C8 /* Debug */,
+				33EB3D8E147023C7D4DDFAC91B82B385 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */,
+				673254EEAF0B5BF4596080C749645884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AC9391E5E08E96C0C0F36FC6965312A /* Build configuration list for PBXNativeTarget "Pods-LionShare Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFBF8816007AF071E1AA4ED196D572F4 /* Debug */,
+				55FD1A5979C555CB62C4E5D005557485 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F760CFA9526D175DFBB995FA1B9FC512 /* Build configuration list for PBXNativeTarget "Pods-LionShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6639A8BED9A0B4FD4F30EEB2C712E317 /* Debug */,
+				7CFD7C5AA7135A5988F9C92EEF0B83F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -1,0 +1,19 @@
+PODS:
+  - Crashlytics (3.8.4):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.11)
+  - Starscream (2.0.4)
+
+DEPENDENCIES:
+  - Crashlytics
+  - Fabric
+  - Starscream (= 2.0.4)
+
+SPEC CHECKSUMS:
+  Crashlytics: 79e236942ca1e7fc641df1feb9a275360a78ab6a
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  Starscream: df5974ee928b157c8eda8af8de7c620276b7dfcc
+
+PODFILE CHECKSUM: 604fcee1bfbb998bc3f07024bad6af4a33a20040
+
+COCOAPODS: 1.1.1
