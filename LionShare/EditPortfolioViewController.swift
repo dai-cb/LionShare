@@ -8,6 +8,7 @@ class EditPortfolioViewController: PortfolioViewController,
 	
 	@IBOutlet weak var tableView: UITableView!
 	@IBOutlet weak var totalAmountLabel: UILabel!
+	@IBOutlet weak var zeroStateView: UIView!
 	
 	var textFieldInUse: UITextField?
 //	let numberToolbar = UIToolbar()
@@ -139,5 +140,16 @@ class EditPortfolioViewController: PortfolioViewController,
 		totalAmountLabel.text = Portfolio.shared.totalNative
 		
 		self.performSegue(withIdentifier: "edit_to_show", sender: self)
+	}
+	
+	@IBAction func zeroStateButtonPressed(_ sender: Any) {
+	
+		UIView.animate(withDuration: 0.7, animations: { 
+			self.zeroStateView.alpha = 0
+		}) { (finished) in
+			self.zeroStateView.removeFromSuperview()
+			UserDefaults.standard.set(true, forKey: "firstRun")
+			UserDefaults.standard.synchronize()
+		}
 	}
 }

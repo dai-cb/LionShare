@@ -13,10 +13,16 @@ class DisplayPortfolioViewController: PortfolioViewController,
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
+		
+		if UserDefaults.standard.bool(forKey: "firstRun") == false {
+			performSegue(withIdentifier: "show_to_edit", sender: self)
+			return
+		}
 		
 		Currency.loadCurrencies()
 		

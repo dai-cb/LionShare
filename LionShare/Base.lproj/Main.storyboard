@@ -130,17 +130,61 @@
                                     <outlet property="delegate" destination="Ttm-ec-8Id" id="wLN-zp-hVg"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CpX-TS-RMF" userLabel="Zero State">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your portfolio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbu-4r-Y0P">
+                                        <rect key="frame" x="0.0" y="267.5" width="375" height="24"/>
+                                        <fontDescription key="fontDescription" name="SFMono-Medium" family="SF Mono" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the amount of each digital currency you own (or want to), then start tracking." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rDl-sG-q7B">
+                                        <rect key="frame" x="30" y="311.5" width="315" height="57.5"/>
+                                        <fontDescription key="fontDescription" name="SFMono-Medium" family="SF Mono" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fij-zZ-M0m">
+                                        <rect key="frame" x="30" y="409" width="315" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="LGt-hV-dhQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFMono-Medium" family="SF Mono" pointSize="20"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="zeroStateButtonPressed:" destination="Ttm-ec-8Id" eventType="touchUpInside" id="gt8-5P-O3P"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.672567246835443" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Vbu-4r-Y0P" firstAttribute="centerY" secondItem="CpX-TS-RMF" secondAttribute="centerY" id="6ND-cY-32V"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fij-zZ-M0m" secondAttribute="trailing" constant="30" id="6gR-3J-IMs"/>
+                                    <constraint firstItem="rDl-sG-q7B" firstAttribute="top" secondItem="Vbu-4r-Y0P" secondAttribute="bottom" constant="20" id="TbU-E1-HkA"/>
+                                    <constraint firstAttribute="trailing" secondItem="rDl-sG-q7B" secondAttribute="trailing" constant="30" id="Tbr-Cs-Pxy"/>
+                                    <constraint firstAttribute="trailing" secondItem="Vbu-4r-Y0P" secondAttribute="trailing" id="dgW-Gg-6xN"/>
+                                    <constraint firstItem="rDl-sG-q7B" firstAttribute="leading" secondItem="CpX-TS-RMF" secondAttribute="leading" constant="30" id="e60-L4-dCA"/>
+                                    <constraint firstItem="Fij-zZ-M0m" firstAttribute="top" secondItem="rDl-sG-q7B" secondAttribute="bottom" constant="40" id="uM5-Dv-md9"/>
+                                    <constraint firstItem="Vbu-4r-Y0P" firstAttribute="leading" secondItem="CpX-TS-RMF" secondAttribute="leading" id="vgq-xY-whY"/>
+                                    <constraint firstItem="Fij-zZ-M0m" firstAttribute="leading" secondItem="CpX-TS-RMF" secondAttribute="leading" constant="30" id="yVz-yX-T82"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.10196078431372549" green="0.10196078431372549" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="1" green="0.45098039220000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="4gh-SV-bKv" firstAttribute="leading" secondItem="xTv-gQ-32G" secondAttribute="leading" id="5IW-XW-bmS"/>
                             <constraint firstItem="ugj-JG-9s1" firstAttribute="leading" secondItem="xTv-gQ-32G" secondAttribute="leading" id="70d-Si-nao"/>
+                            <constraint firstItem="CpX-TS-RMF" firstAttribute="top" secondItem="CT1-ec-hGO" secondAttribute="bottom" id="As0-GL-1Ia"/>
+                            <constraint firstItem="CpX-TS-RMF" firstAttribute="leading" secondItem="xTv-gQ-32G" secondAttribute="leading" id="CEJ-Yd-RbM"/>
                             <constraint firstAttribute="trailing" secondItem="ugj-JG-9s1" secondAttribute="trailing" id="RKH-VN-Uql"/>
                             <constraint firstAttribute="trailing" secondItem="4gh-SV-bKv" secondAttribute="trailing" id="UtL-nc-KZF"/>
+                            <constraint firstItem="xX9-Wy-8Qz" firstAttribute="top" secondItem="CpX-TS-RMF" secondAttribute="bottom" id="Wt4-b3-oNc"/>
                             <constraint firstItem="xX9-Wy-8Qz" firstAttribute="top" secondItem="ugj-JG-9s1" secondAttribute="bottom" id="XAi-MN-svK"/>
                             <constraint firstItem="ugj-JG-9s1" firstAttribute="top" secondItem="4gh-SV-bKv" secondAttribute="bottom" id="fvU-3v-dHI"/>
                             <constraint firstItem="4gh-SV-bKv" firstAttribute="top" secondItem="CT1-ec-hGO" secondAttribute="bottom" id="nd2-Ut-HVH"/>
+                            <constraint firstAttribute="trailing" secondItem="CpX-TS-RMF" secondAttribute="trailing" id="x39-vE-QRh"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="PricesDefault" selectedImage="PricesActive" id="ARq-le-TY4"/>
@@ -158,12 +202,13 @@
                     <connections>
                         <outlet property="tableView" destination="ugj-JG-9s1" id="jWl-bd-Ytw"/>
                         <outlet property="totalAmountLabel" destination="7K4-zS-LcX" id="f8I-PO-vfz"/>
+                        <outlet property="zeroStateView" destination="CpX-TS-RMF" id="ciV-WQ-1eF"/>
                         <segue destination="VpC-c0-75X" kind="showDetail" identifier="edit_to_show" animates="NO" action="showViewController:sender:" id="9WG-6a-x6t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UwE-0r-roN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79" y="1693"/>
+            <point key="canvasLocation" x="121" y="1693"/>
         </scene>
         <!--Portfolio-->
         <scene sceneID="Jgb-HW-Kl5">
